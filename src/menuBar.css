@@ -1,0 +1,109 @@
+button.defaultButton {
+    margin: 10px 0px 20px;
+    padding: 15px 25px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    font-size: 16px;
+    color: #FFF;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0px 7px #999;
+}
+
+button.defaultButton:hover {
+    background-color: #3e8e41;
+    box-shadow: 0px 5px #666;
+    transform: translate(0px, 2px);
+}
+
+button.defaultButton:active {
+    background-color: #3e8e41;
+    box-shadow: 0px 3px #555;
+    transform: translate(0px, 4px);
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #888;
+}
+
+#title {
+    color: #fff;
+    background-color: #0000;
+    margin: 0px;
+    position: relative;
+    top: 0px;
+    font-size: 30px;
+}
+
+#title:hover {
+    cursor: pointer;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+}
+
+div.menuBar {
+    display: inline-block;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    padding: 10px;
+    margin: 0px;
+    width: 100%;
+    height: auto;
+    max-height: 50px;
+    background-color: #000;
+    transition: max-height 1s 10ms;
+    overflow: hidden;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+div.menuBar:hover {
+    max-height: 100%;
+    transition: max-height 1s 0s;
+}
+
+div.menuBar button {
+    opacity: 0;
+    margin: 10px 0px 20px;
+    padding: 15px 25px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    font-size: 16px;
+    color: #FFF;
+    background-color: #4CAF50;
+    border: none;
+    box-shadow: 0px 7px #999;
+    float: left;
+    transition: opacity 0s 1s;
+}
+
+div.menuBar:hover button {
+    opacity: 1;
+    transition: opacity 0.5s 0s;
+}
+
+div.menuBar button:hover {
+    background-color: #3e8e41;
+    box-shadow: 0px 5px #666;
+    transform: translate(0px, 2px);
+}
+
+div.menuBar button:active {
+    background-color: #3e8e41;
+    box-shadow: 0px 3px #555;
+    transform: translate(0px, 4px);
+}
+
+div.menuBar button:not(:last-child) {
+    border-right: none;
+}
