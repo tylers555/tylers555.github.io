@@ -27,7 +27,7 @@ hr {
     width: 50%;
     display: inline-block;
     vertical-align: top;
-    color: #fff;
+    color: #eee;
     background-color: #0000;
     padding: 20px;
     line-height: 1.4;
@@ -37,7 +37,7 @@ hr {
 .sectionTitle {
     font-family: Lucida Console;
     font-variant: small-caps;
-    color: #fff;
+    color: #000;
     background-color: #0000;
     text-indent: 5%;
 }
@@ -59,13 +59,15 @@ body {
     display: block;
     position: relative;
     padding-left: 35px;
+    margin-left: 25px;
     margin-bottom: 12px;
-    cursor: pointer;
-    font-size: 22px;
+    /* cursor: pointer; */
+    font-size: 17px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    color: #eee;
 }
 
 .checkboxContainer input {
@@ -80,8 +82,8 @@ body {
     position: absolute;
     top: 0px;
     left: 0px;
-    height: 25px;
-    width: 25px;
+    height: 20px;
+    width: 20px;
     background-color: #eee;
 }
 
@@ -104,12 +106,12 @@ body {
 }
 
 .checkboxContainer .checkbox:after {
-    left: 9px;
-    top: 5px;
+    left: 7px;
+    top: 2px;
     width: 5px;
     height: 10px;
     border: solid white;
-    border-width: 0 3px 3px 0;
+    border-width: 0 2px 2px 0;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
