@@ -49,5 +49,6 @@ hr {
     max-height: calc(1080px/2);
     margin: 0px auto;
     display: block;
+    border: none;
 }
 
