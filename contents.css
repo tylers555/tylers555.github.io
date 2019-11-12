@@ -1,6 +1,6 @@
 hr {
     margin: 5px auto;
-    border: 1px solid blue;
+    border: 1px solid var(--sectionBreakColor);
     height: 1px;
     width: 95%;
 }
@@ -8,7 +8,7 @@ hr {
 .section {
     box-sizing: border-box;
     display: inline-block;
-    background-color: #4287f5;
+    background-color: var(--sectionColor);
     border-style: solid;
     border-width: 1px;
     width:  100%;
@@ -27,7 +27,7 @@ hr {
     width: 50%;
     display: inline-block;
     vertical-align: top;
-    color: #eee;
+    color: var(--sectionTextColor);
     background-color: #0000;
     padding: 20px;
     line-height: 1.4;
@@ -37,7 +37,7 @@ hr {
 .sectionTitle {
     font-family: Lucida Console;
     font-variant: small-caps;
-    color: #000;
+    color: var(--sectionTitleColor);
     background-color: #0000;
     text-indent: 5%;
 }
@@ -49,10 +49,11 @@ hr {
     max-height: calc(1080px/2);
     margin: 0px auto;
     display: block;
+    border: none;
 }
 
 body {
-    background-color: #4287f5;
+    background-color: var(--backgroundColor);
 }
 
 .checkboxContainer {
@@ -87,9 +88,9 @@ body {
     background-color: #eee;
 }
 
-/* .checkboxContainer:hover .checkbox { */
-/*     background-color: #ccc; */
-/* } */
+.checkboxContainer:hover .checkbox {
+    background-color: #ccc;
+}
 
 .checkboxContainer .checkbox:after {
     content: "";

@@ -27,13 +27,12 @@ button.defaultButton:active {
 body {
     margin: 0px;
     padding: 0px;
-    background-color: #888;
 }
 
 #title {
     color: #fff;
     background-color: #0000;
-    margin: 0px;
+    margin: 5px;
     position: relative;
     top: 0px;
     font-size: 30px;
@@ -47,6 +46,7 @@ body {
     -moz-user-select: none; /* Old versions of Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none;
+    text-decoration: underline;
 }
 
 div.menuBar {
@@ -58,7 +58,7 @@ div.menuBar {
     margin: 0px;
     width: 100%;
     height: auto;
-    max-height: 50px;
+    max-height: 60px;
     background-color: #000;
     transition: max-height 1s 10ms;
     overflow: hidden;
@@ -74,14 +74,14 @@ div.menuBar:hover {
 div.menuBar button {
     opacity: 0;
     margin: 10px 0px 20px;
-    padding: 15px 25px;
+     padding: 15px 25px;
     text-align: center;
     cursor: pointer;
     outline: none;
     font-size: 16px;
     color: #FFF;
-    background-color: #4CAF50;
-    border: none;
+    background-color: var(--menuBarTabColor);
+    border: none; 
     box-shadow: 0px 7px #999;
     float: left;
     transition: opacity 0s 1s;
@@ -93,13 +93,13 @@ div.menuBar:hover button {
 }
 
 div.menuBar button:hover {
-    background-color: #3e8e41;
+    background-color: var(--menuBarTabHoverColor);
     box-shadow: 0px 5px #666;
     transform: translate(0px, 2px);
 }
 
 div.menuBar button:active {
-    background-color: #3e8e41;
+    background-color: var(--menuBarTabActiveColor);
     box-shadow: 0px 3px #555;
     transform: translate(0px, 4px);
 }
