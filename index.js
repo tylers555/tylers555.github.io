@@ -10,6 +10,15 @@ function setup(){
       fullPage.style.animation = "fullpageAppear 200ms ease 1 forwards"
     });
   });
+
+  addEventListener("keyup", (event) => {
+    console.log(event.key)
+    if (event.key == "Escape"){
+      if (fullPage.style.display == 'block'){
+        fullPageDisappear();
+      }
+    }
+  })
 }
 
 function fullPageDisappear(){

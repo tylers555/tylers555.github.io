@@ -24,7 +24,6 @@ hr {
 .section {
     position: relative;
     box-sizing: border-box;
-    display: flex;
     background-color: var(--sectionColor);
     border-style: solid;
     border-width: 1px;
@@ -32,17 +31,20 @@ hr {
     width: 100%;
     padding: 15px;
     border: none;
+    display: flex;
 }
 
 .section img {
-    display: inline-block;
-    width: 45%;
-    height: auto;
+    flex-grow: 1;
+    flex-basis: 10%;
+    width: 50%;
 }
 
 .sectionText {
     box-sizing: border-box;
-    width: 50%;
+    min-width: 20vw;
+    flex: 2;
+
     display: inline-block;
     vertical-align: top;
     color: var(--sectionTextColor);
@@ -75,67 +77,6 @@ hr {
     border: none;
 }
 
-.checkboxContainer {
-    display: block;
-    position: relative;
-    padding-left: 35px;
-    margin-left: 25px;
-    margin-bottom: 12px;
-    font-size: 17px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    color: #eee;
-}
-
-.checkboxContainer input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-}
-
-.checkboxContainer .checkbox {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    height: 20px;
-    width: 20px;
-    background-color: #eee;
-}
-
-.checkboxContainer:hover .checkbox {
-    background-color: #ccc;
-}
-
-.checkboxContainer .checkbox:after {
-    content: "";
-    position: absolute;
-    display: none;
-}
-
-.checkboxContainer input:checked ~ .checkbox {
-    background-color: blue;
-}
-
-.checkboxContainer input:checked ~ .checkbox:after {
-    display: block;
-}
-
-.checkboxContainer .checkbox:after {
-    left: 7px;
-    top: 2px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 2px 2px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
-
 .gallery {
     position: relative;
     
@@ -153,7 +94,7 @@ hr {
 .gallery .picture {
     flex: 1;
     
-    /* height: auto; */
+    height: auto;
     min-width: 20vw;
     max-width: 70vw;
 
@@ -167,11 +108,13 @@ hr {
 
 .gallery .picture:hover {
     transform: scale(1.05);
+    cursor: grab;
 }
 
 .gallery .picture:active {
     transition: transform 100ms;
     transform: scale(1.07);
+    cursor: grab;
 }
 
 .picture img {
@@ -200,6 +143,10 @@ hr {
     opacity: 0;
     /* animation: fullpageAppear 200ms ease forwards */
     /* animation:  */
+}
+
+#fullpage:hover {
+    cursor: grab;
 }
 
 @keyframes fullpageAppear {
