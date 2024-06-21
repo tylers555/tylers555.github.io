@@ -8,12 +8,6 @@
     font-size: 200%;
 }
 
-#title:hover {
-    cursor: pointer;
-    user-select: none;
-    text-decoration: underline;
-}
-
 div.menuBar {
     flex: 0 1 13vw;
     /* position: absolute; */
@@ -53,9 +47,21 @@ div.menuBar .menuBarItem {
     align-items: center;
     text-align: left;
 
-    transition: transform 200ms, background-color 200ms;
+    transition: transform 200ms, background-color 200ms, box-shadow 200ms;
     transition-timing-function: ease-out;
 
+}
+
+div.menuBarItem.current {
+    background-color: var(--menuBarTabActiveColor);
+    box-shadow: 4px 0px #446;
+    transform: translate(-8px, 0px);
+}
+
+div.menuBar .menuBarItem.current:hover {
+    background-color: var(--menuBarTabActiveColor);
+    box-shadow: 4px 0px #668;
+    transform: translate(-2px, 0px);
 }
 
 div.menuBar .menuBarItem:hover {
@@ -69,6 +75,7 @@ div.menuBar .menuBarItem:active {
     box-shadow: 4px 0px #224;
     transform: translate(-10px, 0px);
 }
+
 
 .menuBarItem img {
     width: auto;
