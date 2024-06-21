@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>Sally</title>
+        <link rel="stylesheet" type="text/css" href="theme.css">
+        <link rel="stylesheet" type="text/css" href="../menuBar.css">
+        <link rel="stylesheet" type="text/css" href="../contents.css">
+    </head>
+    <body onload="setup();">
+    <div id="fullpage" onclick="fullPageDisappear()"></div>
+	<div class="contents">
+        <h1 class="sectionTitle">What is Pinky?</h1>
+		<div class="section">
+			<div class="gallery">
+                <div class="sectionText">
+                    <p>
+                        Pinky is a microcontroller board, similar to an Arduino, that I built and designed for use in my projects.
+                        It uses Microchip's PIC16F15243 as it's MCU. I then wrote a script and Arduino program in order to program the device.
+
+                        <br><br><a href="https://github.com/tylers555/Pinky">Pinky's Github</a>
+                        <br><a href="https://github.com/tylers555/PIC_Programmer">PIC Programmer Github</a>
+                    </p>
+                </div>
+                
+                <div class="picture">
+                    <img src="Pinky1.jpg">
+                    <p class="caption">Pinky top side</p>
+                </div>
+                <div class="picture">
+                    <img src="Pinky2.jpg">
+                    <p class="caption">Pinky "topdown"</p>
+                </div>
+                <div class="picture">
+                    <img src="Pinky3.jpg">
+                    <p class="caption">Pinky JSTs</p>
+                </div>
+                <div class="picture">
+                    <img src="Pinky4.jpg">
+                    <p class="caption">Pinky bottom side</p>
+                </div>
+            </div>  
+		</div>
+
+        <h2 class="sectionTitle">Pinky's CAD</h2>
+        <div class="section">
+			<div class="gallery">    
+                <div class="picture">
+                    <img src="Pinky_CAD1.png">
+                    <p class="caption">Pinky's schematic</p>
+                </div>
+                <div class="picture">
+                    <img src="Pinky_CAD2.png">
+                    <p class="caption">Pinky's top side PCB</p>
+                </div>
+                <div class="picture">
+                    <img src="Pinky_CAD3.png">
+                    <p class="caption">Pinky bottom side PCB</p>
+                </div>
+            </div>
+		</div>
+    </div>
+    <script src="../index.js"></script>
+	<div class="menuBar">
+	    <h1 id="title" onclick="window.location.href='../index.html'">
+			<center>Sally</center>
+	    </h1>
+        <button onclick="window.location.href='../snail_jumpy/index.html'">Snail Jumpy</button> <br>
+        <button onclick="window.location.href='./index.html'">Sally</button> <br>
+        <button onclick="window.location.href='../pinky/index.html'">Pinky</button> <br>
+        <button onclick="window.location.href='../esc/index.html'">ESCs</button> <br>
+        <button onclick="window.location.href='../3d_printers/index.html'">3D Printer</button> <br>
+	</div>
+    </body>
+</html>

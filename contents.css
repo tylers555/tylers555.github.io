@@ -24,7 +24,7 @@ hr {
 .section {
     position: relative;
     box-sizing: border-box;
-    display: inline-block;
+    display: flex;
     background-color: var(--sectionColor);
     border-style: solid;
     border-width: 1px;
@@ -55,11 +55,14 @@ hr {
 }
 
 .sectionTitle {
+    display: inline-block;
+    width: 100%;
     font-family: Lucida Console;
     font-variant: small-caps;
     color: var(--sectionTitleColor);
     background-color: #0000;
     text-indent: 5%;
+    text-align: center;
 }
 
 .section iframe {
@@ -152,10 +155,23 @@ hr {
     
     /* height: auto; */
     min-width: 20vw;
+    max-width: 70vw;
 
     margin: 10px;
 
     text-align: center;
+
+    transition: transform 200ms;
+    transition-timing-function: ease;
+}
+
+.gallery .picture:hover {
+    transform: scale(1.05);
+}
+
+.gallery .picture:active {
+    transition: transform 100ms;
+    transform: scale(1.07);
 }
 
 .picture img {
@@ -166,4 +182,35 @@ hr {
 .picture .caption {
     font-family: 'Lucida Sans';
     font-size: 14px;
+}
+
+#fullpage {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-size: contain;
+    background-repeat: no-repeat no-repeat;
+    background-position: center center;
+    background-color: rgba(0, 0, 0, 1);
+
+    opacity: 0;
+    /* animation: fullpageAppear 200ms ease forwards */
+    /* animation:  */
+}
+
+@keyframes fullpageAppear {
+    from {opacity: 0}
+    to   {opacity: 1}
+}
+
+@keyframes fullpageDisappear {
+    from {opacity: 1}
+    to   {
+        display: none;
+        opacity: 0;
+    }
 }
