@@ -6,7 +6,8 @@ body {
 
 .contents {
     position: absolute;
-    width: 85vw;
+    width: 87vw;
+    overflow-x: hidden;
     float: right;
     padding: 0px;
     margin: 0px;
@@ -25,11 +26,9 @@ hr {
     position: relative;
     box-sizing: border-box;
     background-color: var(--sectionColor);
-    border-style: solid;
-    border-width: 1px;
-    margin: auto;
+    margin: 0px;
     width: 100%;
-    padding: 15px;
+    padding: 0px;
     border: none;
     display: flex;
 }
@@ -38,6 +37,10 @@ hr {
     flex-grow: 1;
     flex-basis: 10%;
     width: 50%;
+    max-width: 30vw;
+    margin: 1vw;
+
+    border-radius: 2vw;
 }
 
 .sectionText {
@@ -49,7 +52,8 @@ hr {
     vertical-align: top;
     color: var(--sectionTextColor);
     background-color: #0000;
-    padding: 20px;
+    margin: 1vw;
+    /* padding: 1vw; */
     line-height: 1.4;
 
     font-family: 'Lucida Sans';
@@ -72,7 +76,7 @@ hr {
     width:  100%;
     max-width: calc(1920px/2);
     max-height: calc(1080px/2);
-    margin: 0px auto;
+    margin: 0px 0px;
     display: block;
     border: none;
 }
@@ -82,12 +86,14 @@ hr {
     
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
     width: 100%;
     margin: 0px;
-    padding: 0px;
+    padding: 1vw;
 
     right: 0px;
-
     /* background-color: gray; */
 }
 
@@ -96,9 +102,9 @@ hr {
     
     height: auto;
     min-width: 20vw;
-    max-width: 70vw;
+    max-width: 30vw;
 
-    margin: 10px;
+    margin: 1vw;
 
     text-align: center;
 
@@ -120,6 +126,8 @@ hr {
 .picture img {
     position: relative;
     width: 100%;
+
+    border-radius: 2vw;
 }
 
 .picture .caption {
@@ -138,7 +146,8 @@ hr {
     background-size: contain;
     background-repeat: no-repeat no-repeat;
     background-position: center center;
-    background-color: rgba(0, 0, 0, 1);
+    background-color: rgba(0, 0, 1.0, 0.8);
+    backdrop-filter: saturate(180%) blur(10px);
 
     opacity: 0;
     /* animation: fullpageAppear 200ms ease forwards */

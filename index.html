@@ -6,27 +6,43 @@
 	<link rel="stylesheet" type="text/css" href="contents.css">
     </head>
     <body>
-	<div class="contents">
-		<div class="section">
-			<h1 class="sectionTitle">Welcome</h1>
-			<div class="sectionText">
-				<p>
-					This is my website for showcasing my projects! 
-				</p>
+		<div class="contents">
+			<h1 class="sectionTitle">Tyler's Website</h1>
+			<div class="section">
+				<div class="sectionText">
+					<p>
+						This is my website for showcasing my projects! 
+					</p>
+				</div>
 			</div>
 		</div>
-	</div>
 
-
-	<div class="menuBar">
-	    <h1 id="title" onclick="window.location.href='./index.html'">
-			<center>Tyler's Home Page</center>
-	    </h1>
-	    <button onclick="window.location.href='snail_jumpy/index.html'">Snail Jumpy</button> <br>
-		<button onclick="window.location.href='sally/index.html'">Sally</button> <br>
-		<button onclick="window.location.href='pinky/index.html'">Pinky</button> <br>
-		<button onclick="window.location.href='esc/index.html'">ESCs</button> <br>
-		<button onclick="window.location.href='3d_printers/index.html'">3D Printer</button> <br>
-	</div>
+		<div id="fullpage" onclick="fullPageDisappear()"></div>
+        <script src="../index.js"></script>
+		<div class="menuBar">
+			<h1 id="title" onclick="window.location.href='./index.html'">
+				<center>Tyler's Home Page</center>
+			</h1>
+			<div class="menuBarItem" onclick="window.location.href='./snail_jumpy/index.html'">
+				<img src="./Snail_Jumpy_Icon.png">
+				<p>Snail Jumpy</p> 
+			</div>
+			<div class="menuBarItem" onclick="window.location.href='./sally/index.html'">
+				<img src="./Sally_Icon.png">
+				<p>Sally</p>
+			</div>
+			<div class="menuBarItem" onclick="window.location.href='./pinky/index.html'">
+				<img src="./Pinky_Icon.png">
+				<p>Pinky</p>
+			</div>
+			<div class="menuBarItem" onclick="window.location.href='./esc/index.html'">
+				<img src="./Pinky_Icon.png">
+				<p>ESCs</p>
+			</div>
+			<div class="menuBarItem" onclick="window.location.href='./3d_printers/index.html'">
+				<img src="./Pinky_Icon.png">
+				<p>3D Printer</p>
+			</div>
+		</div>
     </body>
 </html>

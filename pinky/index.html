@@ -6,111 +6,125 @@
         <link rel="stylesheet" type="text/css" href="../contents.css">
     </head>
     <body onload="setup();">
-	<div class="contents">
-        <h1 class="sectionTitle">What is Pinky?</h1>
-		<div class="section">
-			<div class="gallery">
+        <div class="contents">
+            <h1 class="sectionTitle">What is Pinky?</h1>
+            <div class="section">
+                <div class="gallery">
+                    <div class="sectionText">
+                        <p>
+                            Pinky is a microcontroller board, similar to an Arduino, that I built and designed for use in my projects.
+                            It uses Microchip's PIC16F15243 as it's MCU. I then wrote a script and Arduino program in order to program the device.
+                            The final version of Pinky will have a bootloader and will support USB programming similar to Arduino. 
+                            However, a key feature that Pinky has above of Arduino is the inclusion of a number of 4 pin JST connectors for use
+                            with SPI. This allows Pinky to be a host board for a number of connected client boards. 
+                            <br><br>Pinky's features:
+                            <ul>
+                                <li>3x 4-pin JST-PH connectors, with SPI</li>
+                                <li>Programmable via Micro USB</li>
+                                <li>2 wire power input</li>
+                                <li>5-pin connector for low-voltage progrmming</li>
+                                <li>Small form factor</li>
+                            </ul>
+
+                            <br> View the project's Github repo (at your own risk):
+                            <br><a href="https://github.com/tylers555/Pinky">Pinky's Github</a>
+                            <br><a href="https://github.com/tylers555/PIC_Programmer">PIC Programmer Github</a>
+                        </p>
+                    </div>
+                    
+                    <div class="picture">
+                        <img src="Pinky1.jpg">
+                        <p class="caption">Pinky top side</p>
+                    </div>
+                    <div class="picture">
+                        <img src="Pinky2.jpg">
+                        <p class="caption">Pinky "topdown"</p>
+                    </div>
+                    <div class="picture">
+                        <img src="Pinky3.jpg">
+                        <p class="caption">Pinky JSTs</p>
+                    </div>
+                    <div class="picture">
+                        <img src="Pinky4.jpg">
+                        <p class="caption">Pinky bottom side</p>
+                    </div>
+
+                    <div class="picture">
+                        <img src="Pinky_CAD1.png">
+                        <p class="caption">Pinky's schematic</p>
+                    </div>
+                    <div class="picture">
+                        <img src="Pinky_CAD3.png">
+                        <p class="caption">Top side Pinky's PCB</p>
+                    </div>
+                    <div class="picture">
+                        <img src="Pinky_CAD2.png">
+                        <p class="caption">Bottom side of Pinky's PCB</p>
+                    </div>
+                </div>  
+            </div>
+
+            <hr>
+
+            <h2 class="sectionTitle">Plans for Pinky v1.1</h2>
+            <div class="section">
                 <div class="sectionText">
                     <p>
-                        Pinky is a microcontroller board, similar to an Arduino, that I built and designed for use in my projects.
-                        It uses Microchip's PIC16F15243 as it's MCU. I then wrote a script and Arduino program in order to program the device.
-                        The final version of Pinky will have a bootloader and will support USB programming similar to Arduino. 
-                        However, a key feature that Pinky has above of Arduino is the inclusion of a number of 4 pin JST connectors for use
-                        with SPI. This allows Pinky to be a host board for a number of connected client boards. 
-                        <br><br>Pinky's features:
+                        There are currently several flaws with this board, that will be addressed in Pinky v1.1:
                         <ul>
-                            <li>3x 4-pin JST-PH connectors, with SPI</li>
-                            <li>Programmable via Micro USB</li>
-                            <li>2 wire power input</li>
-                            <li>5-pin connector for low-voltage progrmming</li>
-                            <li>Small form factor</li>
+                            <li>The GPIO layout is terrible (doesn't really support shields)</li>
+                            <li>CH340C needs a 4.7k pull down resistor on DTR (easy fix with THT resistor)</li>
+                            <li>Green status LED is far too bright</li>
+                            <li>Micro USB is old</li>
+                            <li>Reset switch does nothing</li>
+                            <li>Mounting with screws is limited</li>
+                            <li>Some components are useless because of LVP</li>
                         </ul>
-
-                        <br> View the project's Github repo (at your own risk):
-                        <br><a href="https://github.com/tylers555/Pinky">Pinky's Github</a>
-                        <br><a href="https://github.com/tylers555/PIC_Programmer">PIC Programmer Github</a>
                     </p>
                 </div>
-                
-                <div class="picture">
-                    <img src="Pinky1.jpg">
-                    <p class="caption">Pinky top side</p>
-                </div>
-                <div class="picture">
-                    <img src="Pinky2.jpg">
-                    <p class="caption">Pinky "topdown"</p>
-                </div>
-                <div class="picture">
-                    <img src="Pinky3.jpg">
-                    <p class="caption">Pinky JSTs</p>
-                </div>
-                <div class="picture">
-                    <img src="Pinky4.jpg">
-                    <p class="caption">Pinky bottom side</p>
-                </div>
-
-                <div class="picture">
-                    <img src="Pinky_CAD1.png">
-                    <p class="caption">Pinky's schematic</p>
-                </div>
-                <div class="picture">
-                    <img src="Pinky_CAD3.png">
-                    <p class="caption">Pinky's top side PCB</p>
-                </div>
-                <div class="picture">
-                    <img src="Pinky_CAD2.png">
-                    <p class="caption">Pinky bottom side PCB</p>
-                </div>
-            </div>  
-		</div>
-
-        <hr>
-
-        <h2 class="sectionTitle">Plans for Pinky v1.1</h2>
-        <div class="section">
-			<div class="sectionText">
-                <p>
-                    There are currently several flaws with this board, that will be addressed in Pinky v1.1:
-                    <ul>
-                        <li>The GPIO layout is terrible (doesn't really support shields)</li>
-                        <li>CH340C needs a 4.7k pull down resistor on DTR (easy fix with THT resistor)</li>
-                        <li>Green status LED is far too bright</li>
-                        <li>Micro USB is old</li>
-                        <li>Reset switch does nothing</li>
-                        <li>Mounting with screws is limited</li>
-                        <li>Some components are useless because of LVP</li>
-                    </ul>
-                </p>
             </div>
-		</div>
 
-
-        <h2 class="sectionTitle">Future plans</h2>
-        <div class="section">
-			<div class="sectionText">
-                <p>
-                    Some future version of Pinky will have these features:
-                    <ul>
-                        <li>Some form of RF transceiver</li>
-                        <li>32-bit MCU</li>
-                    </ul>
-                </p>
+            <h2 class="sectionTitle">Future plans</h2>
+            <div class="section">
+                <div class="sectionText">
+                    <p>
+                        Some future version of Pinky will have these features:
+                        <ul>
+                            <li>Some form of RF transceiver</li>
+                            <li>32-bit MCU</li>
+                        </ul>
+                    </p>
+                </div>
             </div>
-		</div>
 
-    </div>
+        </div>
 
-    <div id="fullpage" onclick="fullPageDisappear()"></div>
-    <script src="../index.js"></script>
-	<div class="menuBar">
-	    <h1 id="title" onclick="window.location.href='../index.html'">
-			<center>Pinky</center>
-	    </h1>
-        <button onclick="window.location.href='../snail_jumpy/index.html'">Snail Jumpy</button> <br>
-        <button onclick="window.location.href='../sally/index.html'">Sally</button> <br>
-        <button onclick="window.location.href='./index.html'">Pinky</button> <br>
-        <button onclick="window.location.href='../esc/index.html'">ESCs</button> <br>
-        <button onclick="window.location.href='../3d_printers/index.html'">3D Printer</button> <br>
-	</div>
+        <div id="fullpage" onclick="fullPageDisappear()"></div>
+        <script src="../index.js"></script>
+        <div class="menuBar">
+            <h1 id="title" onclick="window.location.href='../index.html'">
+                <center>Pinky</center>
+            </h1>
+            <div class="menuBarItem" onclick="window.location.href='../snail_jumpy/index.html'">
+                <img src="../Snail_Jumpy_Icon.png">
+                <p>Snail Jumpy</p> 
+            </div>
+            <div class="menuBarItem" onclick="window.location.href='../sally/index.html'">
+                <img src="../Sally_Icon.png">
+                <p>Sally</p>
+            </div>
+            <div class="menuBarItem" onclick="window.location.href='./index.html'">
+                <img src="../Pinky_Icon.png">
+                <p>Pinky</p>
+            </div>
+            <div class="menuBarItem" onclick="window.location.href='../esc/index.html'">
+                <img src="../Pinky_Icon.png">
+                <p>ESCs</p>
+            </div>
+            <div class="menuBarItem" onclick="window.location.href='../3d_printers/index.html'">
+                <img src="../Pinky_Icon.png">
+                <p>3D Printer</p>
+            </div>
+        </div>
     </body>
 </html>
