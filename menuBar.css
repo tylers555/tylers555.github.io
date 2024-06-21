@@ -1,37 +1,11 @@
-button.defaultButton {
-    margin: 10px 0px 20px;
-    padding: 15px 25px;
-    text-align: center;
-    cursor: pointer;
-    outline: none;
-    font-size: 16px;
-    color: #FFF;
-    background-color: #4CAF50;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0px 7px #999;
-}
-
-button.defaultButton:hover {
-    background-color: #3e8e41;
-    box-shadow: 0px 5px #666;
-    transform: translate(0px, 2px);
-}
-
-button.defaultButton:active {
-    background-color: #3e8e41;
-    box-shadow: 0px 3px #555;
-    transform: translate(0px, 4px);
-}
-
 #title {
     color: #fff;
     background-color: #0000;
     margin: auto;
-    padding-bottom: 1lh;
+    padding: 1lh 0.5lh 1lh;
     position: relative;
     top: 0px;
-    font-size: 30px;
+    font-size: 200%;
 }
 
 #title:hover {
@@ -41,16 +15,16 @@ button.defaultButton:active {
 }
 
 div.menuBar {
+    flex: 0 1 13vw;
+    /* position: absolute; */
     /* display: inline-block; */
-    position: fixed;
     top: 0px;
     left: 0px;
     bottom: 0px;
     padding: 10px;
     margin: 0vw;
     padding: 0px;
-    width: 13vw;
-    height: calc(100%);
+    height: 100vh;
     background-color: #112;
     float: left;
 }
@@ -61,7 +35,8 @@ div.menuBar .menuBarItem {
     text-align: center;
     cursor: pointer;
     outline: none;
-    font-size: 16px;
+    font-family: 'Lucida Sans';
+    font-size: 100%;
     color: #FFF;
     background-color: var(--menuBarTabColor);
     border-top: solid; 
@@ -79,20 +54,20 @@ div.menuBar .menuBarItem {
     text-align: left;
 
     transition: transform 200ms, background-color 200ms;
-    transition-timing-function: ease;
+    transition-timing-function: ease-out;
 
 }
 
 div.menuBar .menuBarItem:hover {
     background-color: var(--menuBarTabHoverColor);
     box-shadow: 5px 0px #446;
-    transform: translate(-4px, 0px);
+    transform: translate(-8px, 0px);
 }
 
 div.menuBar .menuBarItem:active {
     background-color: var(--menuBarTabActiveColor);
-    box-shadow: 3px 0px #224;
-    transform: translate(-6px, 0px);
+    box-shadow: 4px 0px #224;
+    transform: translate(-10px, 0px);
 }
 
 .menuBarItem img {
@@ -103,5 +78,5 @@ div.menuBar .menuBarItem:active {
 }
 
 .menuBarItem p {
-    padding: .5lh;
+    padding-right: 2lh;
 }

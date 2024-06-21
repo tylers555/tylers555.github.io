@@ -6,6 +6,33 @@
         <link rel="stylesheet" type="text/css" href="../contents.css">
     </head>
     <body onload="setup();">
+        <script src="../index.js"></script>
+        <div class="menuBar">
+            <h1 id="title" onclick="window.location.href='../index.html'">
+                <center>Pinky</center>
+            </h1>
+            <div class="menuBarItem" onclick="window.location.href='../snail_jumpy/index.html'">
+                <img src="../Snail_Jumpy_Icon.png">
+                <p>Snail Jumpy</p> 
+            </div>
+            <div class="menuBarItem" onclick="window.location.href='../sally/index.html'">
+                <img src="../Sally_Icon.png">
+                <p>Sally</p>
+            </div>
+            <div class="menuBarItem" onclick="window.location.href='./index.html'">
+                <img src="../Pinky_Icon.png">
+                <p>Pinky</p>
+            </div>
+            <div class="menuBarItem" onclick="window.location.href='../esc/index.html'">
+                <img src="../Pinky_Icon.png">
+                <p>ESCs</p>
+            </div>
+            <div class="menuBarItem" onclick="window.location.href='../3d_printers/index.html'">
+                <img src="../Pinky_Icon.png">
+                <p>3D Printer</p>
+            </div>
+        </div>
+        
         <div class="contents">
             <h1 class="sectionTitle">What is Pinky?</h1>
             <div class="section">
@@ -15,7 +42,7 @@
                             Pinky is a microcontroller board, similar to an Arduino, that I built and designed for use in my projects.
                             It uses Microchip's PIC16F15243 as it's MCU. I then wrote a script and Arduino program in order to program the device.
                             The final version of Pinky will have a bootloader and will support USB programming similar to Arduino. 
-                            However, a key feature that Pinky has above of Arduino is the inclusion of a number of 4 pin JST connectors for use
+                            However, a key feature that Pinky has above of Arduino is the inclusion of a number of 4-pin JST connectors for use
                             with SPI. This allows Pinky to be a host board for a number of connected client boards. 
                             <br><br>Pinky's features:
                             <ul>
@@ -100,31 +127,5 @@
         </div>
 
         <div id="fullpage" onclick="fullPageDisappear()"></div>
-        <script src="../index.js"></script>
-        <div class="menuBar">
-            <h1 id="title" onclick="window.location.href='../index.html'">
-                <center>Pinky</center>
-            </h1>
-            <div class="menuBarItem" onclick="window.location.href='../snail_jumpy/index.html'">
-                <img src="../Snail_Jumpy_Icon.png">
-                <p>Snail Jumpy</p> 
-            </div>
-            <div class="menuBarItem" onclick="window.location.href='../sally/index.html'">
-                <img src="../Sally_Icon.png">
-                <p>Sally</p>
-            </div>
-            <div class="menuBarItem" onclick="window.location.href='./index.html'">
-                <img src="../Pinky_Icon.png">
-                <p>Pinky</p>
-            </div>
-            <div class="menuBarItem" onclick="window.location.href='../esc/index.html'">
-                <img src="../Pinky_Icon.png">
-                <p>ESCs</p>
-            </div>
-            <div class="menuBarItem" onclick="window.location.href='../3d_printers/index.html'">
-                <img src="../Pinky_Icon.png">
-                <p>3D Printer</p>
-            </div>
-        </div>
     </body>
 </html>
