@@ -1,0 +1,13 @@
+:root {
+    --backgroundColor: #e2baff;
+
+    --menuBarTabColor: #7d4caf;
+    --menuBarTabHoverColor: #5b3e8e;
+    --menuBarTabActiveColor: #43285d;
+
+    --sectionColor: #dabaff;
+    --sectionBreakColor: purple;
+    --sectionTitleColor: #000;
+    --sectionTextColor: #000;
+    --captionTextColor: #444;
+}
