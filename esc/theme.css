@@ -1,13 +1,34 @@
 :root {
-    --backgroundColor: #ffbaba;
+    --color1: #294131;
+    --color2: #6BAA75;
+    --color3: #2F1B25;
+    --color4: #F7567C;
+    --color5: #F3E0EC;
 
-    --menuBarTabColor: #af4c4c;
-    --menuBarTabHoverColor: #8e3e3e;
-    --menuBarTabActiveColor: #5d2828;
+    --backgroundColor: var(--color3);
 
-    --sectionColor: #ffbaba;
-    --sectionBreakColor: red;
-    --sectionTitleColor: #000;
-    --sectionTextColor: #000;
-    --captionTextColor: #444;
+    --menuBarBackgroundColor: var(--color1);
+    --menuBarTabColor: var(--color2);
+    --menuBarTabHoverColor: var(--color5);
+    --menuBarTabActiveColor: var(--color4);
+
+    --sectionColor: var(--color3);
+    --sectionBreakColor: var(--color5);
+    --sectionTitleColor: #eee;
+    --sectionTextColor: #eee;
+    --captionTextColor: #eee;
+    
+    --galleryBackground: #29413155;
+    --galleryOutline: var(--color2);
+    
+    --galleryArrowColor: var(--color2);
+    --galleryArrowActiveColor: var(--color4);
+    --galleryArrowInactiveColor: var(--color5);
+
+    --galleryDotColor: var(--color5);
+    --galleryActiveDotColor: var(--color4);
+
+    --linkColor: var(--color5);
+    --linkHoverColor: var(--color2);
+    --linkActiveColor: var(--color4);
 }

@@ -5,14 +5,11 @@
 		<link rel="stylesheet" type="text/css" href="../menuBar.css">
 		<link rel="stylesheet" type="text/css" href="../contents.css">
 		<link rel="icon" type="image/x-icon" href="../Snail_Jumpy_Icon.ico">
-    </head>
-
-    <body onload="setup();">
 		<script src="../index.js"></script>
+    </head>
+    <body onload="setup();">
 		<div class="menuBar">
-			<h1 id="title">
-				<center>ESCs</center>
-			</h1>
+			<h1 id="title"><p>ESCs</p></h1>
 			<div class="menuBarItem" onclick="window.location.href='../snail_jumpy/index.html'">
 				<img src="../Snail_Jumpy_Icon.png">
 				<p>Snail Jumpy</p> 
@@ -33,44 +30,61 @@
 				<img src="../Pinky_Icon.png">
 				<p>3D Printer</p>
 			</div>
+            <div class="menuBarHome">
+                <p onclick="window.location.href='../index.html'">Home</p>
+            </div>
 		</div>
 
 		<div id="fullpage"></div>
 		<div class="contents">
-			<h1 class="sectionTitle">3-Channel Brushed ESC</h1>
-			<div class="section">
-				<div class="sectionText">
-					<p>
-						I have designed and assembled a 3-channel brushed ESC and a brushless ESC.
-						Intended to be used inside in my robots (in conjunction with Pinky).
-					</p>
-				</div>
-			</div>
-			<div class="section">
-				<div class="gallery">
-					<div class="picture">
-						<img src="BDC_Schematic.png">
-						<p class="caption">BDC ESC spinning 2 motors without a load.<br>One has variable speed</p>
-					</div>
-					<div class="picture">
-						<img src="BDC_PCB_Front.png">
-						<p class="caption">BDC ESC spinning 2 motors without a load.<br>One has variable speed</p>
-					</div>
-					<div class="picture">
-						<img src="BDC_PCB_Back.png">
-						<p class="caption">BDC ESC spinning 2 motors without a load.<br>One has variable speed</p>
-					</div>
-					<div class="picture">
-						<video src="BDC_ESC_Video1.mp4"></video>
-						<p class="caption">BDC ESC spinning 2 motors without a load.<br>One has variable speed</p>
-					</div>
-					<div class="picture">
-						<video src="BDC_ESC_Video4.mp4"></video>
-						<p class="caption">BDC ESC spinning 2 motors that move Sally</p>
+			<div class="page">
+				<h1 class="sectionTitle">3-Channel Brushed ESC</h1>
+				<div class="section">
+					<div class="sectionText">
+						<p>
+							I have designed and assembled a 3-channel brushed ESC and a brushless ESC.
+							Intended to be used inside in my robots (in conjunction with Pinky).
+						</p>
 					</div>
 				</div>
+				<div class="section">
+					<div class="galleryUI">
+                        <div class="upper">
+                            <button class="galleryArrow inactive"><</button>
+                            <div class="gallery">
+								<div class="picture">
+									<img src="BDC_Schematic.png">
+									<p class="caption">BDC ESC spinning 2 motors without a load.<br>One has variable speed</p>
+								</div>
+								<div class="picture">
+									<img src="BDC_PCB_Front.png">
+									<p class="caption">BDC ESC spinning 2 motors without a load.<br>One has variable speed</p>
+								</div>
+								<div class="picture">
+									<img src="BDC_PCB_Back.png">
+									<p class="caption">BDC ESC spinning 2 motors without a load.<br>One has variable speed</p>
+								</div>
+								<div class="picture">
+									<video src="BDC_ESC_Video1.mp4"></video>
+									<p class="caption">BDC ESC spinning 2 motors without a load.<br>One has variable speed</p>
+								</div>
+								<div class="picture">
+									<video src="BDC_ESC_Video4.mp4"></video>
+									<p class="caption">BDC ESC spinning 2 motors that move Sally</p>
+								</div>
+							</div>
+                            <button class="galleryArrow">></button>
+                        </div>
+                        <div class="dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+				</div>
 			</div>
-			<hr>
 		</div>
 
     </body>

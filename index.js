@@ -46,6 +46,82 @@ function setup(){
       }
     }
   })
+
+  // var timer = null
+  // var stoppedScrolling = false;
+  // const galleries = document.querySelectorAll('.gallery');
+  // galleries.forEach(gallery => {
+  //     // where "container" is the id of the container
+  //     gallery.addEventListener("wheel", function (e) {
+  //     gallery.scrollBy(e.deltaY, 0);
+  //     amount = gallery.scrollLeft / (gallery.scrollWidth - gallery.clientWidth);
+  //     if(isNaN(amount)){
+  //     }else if(stoppedScrolling && (amount == 0) && (e.deltaY < 0)){
+  //     }else if(stoppedScrolling && (amount > 0.99) && (e.deltaY > 0)){
+  //     }else{      
+  //       e.preventDefault();
+  //     }
+  //     stoppedScrolling = false;
+  //     if(timer !== null) {
+  //       console.log("Here1")
+  //       clearTimeout(timer);        
+  //     }
+  //     timer = setTimeout(function() {
+  //         console.log("Here2")
+  //         stoppedScrolling = true;
+  //     }, 150);
+  //   });
+  // })
+
+  const galleryUIs = document.querySelectorAll('.galleryUI');
+  galleryUIs.forEach(galleryUI => {
+    const gallery  = galleryUI.querySelector('.gallery');
+    const pictures = gallery.querySelectorAll('.picture');
+    const dots     = galleryUI.querySelectorAll('.dots .dot');
+    const buttons  = galleryUI.querySelectorAll(".galleryArrow")
+
+    console.log(pictures.length);
+    console.log(dots.length);
+
+    gallery.addEventListener("scroll", (event) => {
+      var activeIndex = Math.round(gallery.scrollLeft/gallery.clientWidth);
+      if(activeIndex >= 0){
+        dots.forEach(dot => {
+          dot.classList.remove('active');
+        })
+        dots[activeIndex].classList.add('active');
+      }
+
+      if(activeIndex == 0) 
+        buttons[0].classList.add('inactive')
+      else
+        buttons[0].classList.remove('inactive')
+
+      if(activeIndex == dots.length-1) 
+        buttons[1].classList.add('inactive')
+      else
+        buttons[1].classList.remove('inactive')
+    })
+
+    dots.forEach(dot => {
+      dot.addEventListener("click", (e) => {
+        console.log(dots);
+
+        var index = Array.prototype.indexOf.call(dots, dot);
+        gallery.scrollTo(index*gallery.clientWidth, 0);
+      })
+    })
+
+    // Left
+    buttons[0].addEventListener("click", (e) => {
+      gallery.scrollBy(-gallery.clientWidth, 0);
+    })
+
+    // Right
+    buttons[1].addEventListener("click", (e) => {
+      gallery.scrollBy(gallery.clientWidth, 0);
+    })
+  })
 }
 
 function fullPageDisappear(){
