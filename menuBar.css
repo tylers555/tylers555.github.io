@@ -80,8 +80,6 @@ div.menuBar .menuBarHome {
 
     padding: 0px;
     margin: 0px;
-    
-    /* border: solid red; */
 }
 
 div.menuBar .menuBarHome p {
@@ -98,6 +96,18 @@ div.menuBar .menuBarHome p {
     margin: 0px;
     margin-bottom: 2vh;
     padding: 0px;
+
+    transition: color 200ms;
+    transition-timing-function: ease;
+}
+
+
+div.menuBar .menuBarHome p:hover {
+    color: var(--linkHoverColor);
+}
+
+div.menuBar .menuBarHome p:active {
+    color: var(--linkActiveColor);
 }
 
 div.menuBarItem.current {
