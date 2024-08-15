@@ -84,6 +84,7 @@ function setup(){
     const autoScrollTimeout = 10000;
 
     var doAutoScroll = true;
+    var autoScrollTimer = null
 
     gallery.addEventListener("scroll", (event) => {
       var activeIndex = Math.round(gallery.scrollLeft/gallery.clientWidth);
@@ -125,9 +126,13 @@ function setup(){
         gallery.scrollTo(index*gallery.clientWidth, 0);
 
         doAutoScroll = false;
-        setTimeout(() => {
-          doAutoScroll = true;
-        }, autoScrollTimeout);
+        if (!autoScrollTimer){
+            autoScrollTimer = setTimeout(() => {
+            doAutoScroll = true;
+          }, autoScrollTimeout);
+        }else{
+          autoScrollTimer.reset();
+        }
       })
     })
 
@@ -136,20 +141,28 @@ function setup(){
       var activeIndex = Math.round(gallery.scrollLeft/gallery.clientWidth);
       gallery.scrollTo((activeIndex-1)*gallery.clientWidth, 0);
       doAutoScroll = false;
-      setTimeout(() => {
-        doAutoScroll = true;
-      }, autoScrollTimeout);
-    })
+      if (!autoScrollTimer){
+          autoScrollTimer = setTimeout(() => {
+          doAutoScroll = true;
+        }, autoScrollTimeout);
+      }else{
+        autoScrollTimer.reset();
+      }
+    });
 
     // Right
     buttons[1].addEventListener("click", (e) => {
       var activeIndex = Math.round(gallery.scrollLeft/gallery.clientWidth);
       gallery.scrollTo((activeIndex+1)*gallery.clientWidth, 0);
       doAutoScroll = false;
-      setTimeout(() => {
-        doAutoScroll = true;
-      }, autoScrollTimeout);
-    })
+      if (!autoScrollTimer){
+          autoScrollTimer = setTimeout(() => {
+          doAutoScroll = true;
+        }, autoScrollTimeout);
+      }else{
+        autoScrollTimer.reset();
+      }
+    });
   })
 }
 

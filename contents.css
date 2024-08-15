@@ -128,12 +128,15 @@ hr {
     border: max(0.2vw, 0.2vh) solid var(--galleryOutline);
     border-radius: max(2vw, 2vw);
 
-    overflow: hidden;
-    margin: max(2vw, 2vh);
-    /* min-width: 60%; */
+    overflow: visible;
+    margin: 2vh 5vw;
+    
+    width: min-content;
+    height: min-content;
+    min-width: 50%;
     max-width: 70%;
-    /* min-height: 50%; */
-    max-height: 70%;
+    min-height: 50vh;
+    max-height: 70vh;
 
     padding: 2%;
 }
@@ -142,6 +145,11 @@ hr {
     display: flex;
     align-items: center;
     max-width: 100%;
+    max-height: 70vh;
+
+    /* border: solid blue; */
+
+    overflow: visible;
 }
 
 .galleryArrow {
@@ -172,7 +180,6 @@ hr {
     
     transition: transform 200ms, background-color 200ms, opacity 500ms;
     transition-timing-function: ease;
-    /* border: solid red; */
 }
 
 .galleryUI:hover .galleryArrow {
@@ -202,12 +209,17 @@ hr {
     
     display: flex;
     flex-wrap: nowrap;
-    overflow: scroll;
-    justify-content: center;
     align-items: center;
 
-    margin: 0% -3%;
-    padding: 0% 0px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+
+    margin: 0% 0%;
+    padding: 2% 0%;
+
+    max-width: 100%;
+    height: 50vh;
+    max-height: 100%;
 
     /* border: solid red; */
 
@@ -228,21 +240,28 @@ hr {
     flex: 1;
     
     position: relative;
-    display: inline-block;
-    min-width: 100%;
-    max-width: 100%;
-
-    padding: 0 0;
-    overflow: visible;
-
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    align-items: center;
+    vertical-align: bottom;
+
+
+    min-height: 0;
+    min-width: 92%;
+    max-width: 92%;
+    /* height: 60%; */
+    max-height: 100%;
+
+    padding: 2% 4%;
+    overflow: hidden;
 
     transition: transform 200ms;
     transition-timing-function: ease;
 
     scroll-snap-align: center;
     
-    /* border: solid red; */
+    /* border: solid pink; */
 }
 
 .gallery .picture:hover {
@@ -257,40 +276,49 @@ hr {
 }
 
 .picture img {
+    flex: 1;
+    flex-shrink: 1;
     position: relative;
     border-radius: 2vw;
     margin: 0px;
-
+    
+    min-width: 0;
+    min-height: 0;
     max-width: 100%;
-    /* max-height: 50vh; */
+    max-height: 100%;
     width: auto;
 
     object-fit: cover;
-    /* position: relative;
-    min-width: 100%;
-    width: 100%; */
-    /* min-height: 100%; */
-    /* max-height: 60vh;
-
-    border-radius: 2vw;
-    margin: 0px;
-
-    object-fit: cover; */
-    /* object-position: 90%; */
-
-    /* border: solid red; */
 }
 
 .picture video {
+    flex: 1;
+    flex-shrink: 1;
     position: relative;
     border-radius: 2vw;
     margin: 0px;
 
+    min-width: 0;
+    min-height: 0;
     max-width: 100%;
-    max-height: 50vh;
+    max-height: 100%;
     width: auto;
 
     object-fit: cover;
+}
+
+.picture .caption {
+    flex: 1;
+    font-family: 'Georgia';
+    font-weight: 100;
+    color: var(--captionTextColor);
+    margin: 0px;
+    font-size: 100%;
+    text-align: center;
+
+    height: min-content;
+
+    /* border: solid purple; */
 }
 
 .galleryUI .dots {
@@ -321,15 +349,6 @@ hr {
 
 .galleryUI .dots .dot.active {
     background-color: var(--galleryActiveDotColor);
-}
-
-.picture .caption {
-    font-family: 'Georgia';
-    font-weight: 100;
-    color: var(--captionTextColor);
-    margin: 1%;
-    font-size: 100%;
-    text-align: center;
 }
 
 #fullpage {
