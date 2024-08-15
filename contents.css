@@ -125,14 +125,15 @@ hr {
     align-items: center;
 
     background-color: var(--galleryBackground);
-    border: 0.2vw solid var(--galleryOutline);
-    border-radius: 2vw;
+    border: max(0.2vw, 0.2vh) solid var(--galleryOutline);
+    border-radius: max(2vw, 2vw);
 
     overflow: hidden;
+    margin: max(2vw, 2vh);
     /* min-width: 60%; */
-    max-width: 60%;
-    min-height: 50%;
-    /* max-height: 70vh; */
+    max-width: 70%;
+    /* min-height: 50%; */
+    max-height: 70%;
 
     padding: 2%;
 }
@@ -140,20 +141,23 @@ hr {
 .galleryUI .upper {
     display: flex;
     align-items: center;
+    max-width: 100%;
 }
 
 .galleryArrow {
+    display: none;
     flex: 1;
     position: relative;
     display: block;
+    opacity: 0;
 
-    font-size: 1.5vw;
+    font-size: max(1.5vw, 1vh);
     margin: 0px;
     padding: 0px;
-    min-width: 2vw;
-    max-width: 2vw;
-    min-height: 2vw;
-    max-height: 2vw;
+    min-width: max(2vw, 2vh);
+    max-width: max(2vw, 2vh);
+    min-height: max(2vw, 2vh);
+    max-height: max(2vw, 2vh);
     
     text-align: center;
     align-items: center;
@@ -166,22 +170,23 @@ hr {
     
     z-index: 1000;
     
-    transition: transform 2s;
-    transition: background-color 200ms;
+    transition: transform 200ms, background-color 200ms, opacity 500ms;
     transition-timing-function: ease;
     /* border: solid red; */
 }
 
+.galleryUI:hover .galleryArrow {
+    opacity: 1;
+}
+
 .galleryArrow:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
     cursor: grab;
-    transition: transform 200ms;
 }
 
 .galleryArrow:active {
     background-color: var(--galleryArrowActiveColor);
-    transform: scale(1.2);
-    transition: transform 100ms;
+    transform: scale(1.3);
     cursor: grab;
 }
 
@@ -198,18 +203,17 @@ hr {
     display: flex;
     flex-wrap: nowrap;
     overflow: scroll;
-    /* justify-content: center; */
+    justify-content: center;
     align-items: center;
 
-    max-width: 100%;
-    /* max-height: 100%; */
     margin: 0% -3%;
-    padding: 2% 0px;
+    padding: 0% 0px;
 
     /* border: solid red; */
 
     scroll-snap-type: x mandatory;
     scroll-snap-stop: always;
+    scroll-behavior: smooth;
 
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
@@ -225,14 +229,10 @@ hr {
     
     position: relative;
     display: inline-block;
-    min-width: 92%;
-    max-width: 92%;
-    /* height: auto; */
-    
-    min-height: 50vh;
-    max-height: 70vh;
+    min-width: 100%;
+    max-width: 100%;
 
-    padding: 0 4%;
+    padding: 0 0;
     overflow: visible;
 
     text-align: center;
@@ -258,15 +258,24 @@ hr {
 
 .picture img {
     position: relative;
+    border-radius: 2vw;
+    margin: 0px;
+
+    max-width: 100%;
+    /* max-height: 50vh; */
+    width: auto;
+
+    object-fit: cover;
+    /* position: relative;
     min-width: 100%;
-    /* width: 100%; */
+    width: 100%; */
     /* min-height: 100%; */
-    max-height: 60vh;
+    /* max-height: 60vh;
 
     border-radius: 2vw;
     margin: 0px;
 
-    object-fit: cover;
+    object-fit: cover; */
     /* object-position: 90%; */
 
     /* border: solid red; */
@@ -294,12 +303,12 @@ hr {
 }
 
 .dot {
-    height: 1vw;
-    width: 1vw;
+    height: max(1vw, 1vh);
+    width: max(1vw, 1vh);
     background-color: var(--galleryDotColor);
     border-radius: 50%;
     display: inline-block;
-    margin: 2% 0.1vw;
+    margin: 2% max(0.1vw, 0.1vh);
     
     transition: background-color 200ms;
     transition-timing-function: ease;
@@ -339,6 +348,8 @@ hr {
 
     align-items: flex-start;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
     opacity: 0;
     /* animation: fullpageAppear 200ms ease forwards */

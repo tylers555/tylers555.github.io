@@ -78,10 +78,12 @@ function setup(){
     const gallery  = galleryUI.querySelector('.gallery');
     const pictures = gallery.querySelectorAll('.picture');
     const dots     = galleryUI.querySelectorAll('.dots .dot');
-    const buttons  = galleryUI.querySelectorAll(".galleryArrow")
+    const buttons  = galleryUI.querySelectorAll(".galleryArrow");
+    
+    const rotationDelay = 2000;
+    const autoScrollTimeout = 10000;
 
-    console.log(pictures.length);
-    console.log(dots.length);
+    var doAutoScroll = true;
 
     gallery.addEventListener("scroll", (event) => {
       var activeIndex = Math.round(gallery.scrollLeft/gallery.clientWidth);
@@ -103,23 +105,50 @@ function setup(){
         buttons[1].classList.remove('inactive')
     })
 
+    setInterval(() => {
+      const rect = gallery.getBoundingClientRect();
+      if (doAutoScroll &&
+          (rect.top >= 0) &&
+          (rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))){
+        var activeIndex = Math.round(gallery.scrollLeft/gallery.clientWidth);
+        activeIndex += 1;
+        activeIndex %= dots.length;
+        gallery.scrollTo(activeIndex*gallery.clientWidth, 0);
+      }
+    }, rotationDelay);
+
     dots.forEach(dot => {
       dot.addEventListener("click", (e) => {
         console.log(dots);
 
         var index = Array.prototype.indexOf.call(dots, dot);
         gallery.scrollTo(index*gallery.clientWidth, 0);
+
+        doAutoScroll = false;
+        setTimeout(() => {
+          doAutoScroll = true;
+        }, autoScrollTimeout);
       })
     })
 
     // Left
     buttons[0].addEventListener("click", (e) => {
-      gallery.scrollBy(-gallery.clientWidth, 0);
+      var activeIndex = Math.round(gallery.scrollLeft/gallery.clientWidth);
+      gallery.scrollTo((activeIndex-1)*gallery.clientWidth, 0);
+      doAutoScroll = false;
+      setTimeout(() => {
+        doAutoScroll = true;
+      }, autoScrollTimeout);
     })
 
     // Right
     buttons[1].addEventListener("click", (e) => {
-      gallery.scrollBy(gallery.clientWidth, 0);
+      var activeIndex = Math.round(gallery.scrollLeft/gallery.clientWidth);
+      gallery.scrollTo((activeIndex+1)*gallery.clientWidth, 0);
+      doAutoScroll = false;
+      setTimeout(() => {
+        doAutoScroll = true;
+      }, autoScrollTimeout);
     })
   })
 }
