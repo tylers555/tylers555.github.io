@@ -171,3 +171,5 @@ function fullPageDisappear(){
   fullPage.innerHTML = '';
   fullPage.style.animation = 'fullpageDisappear 200ms ease 1 forwards';
 }
+
+setup()

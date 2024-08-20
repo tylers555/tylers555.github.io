@@ -27,7 +27,7 @@ body {
 .page {
     display: flex;
     flex-direction: column;
-    min-height: 100%;
+    min-height: 105%;
     scroll-snap-align: start;
 }
 
