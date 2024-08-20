@@ -21,6 +21,10 @@
     text-align: center;
 }
 
+label.menu {
+    display: none;
+}
+
 div.menuBar {
     flex: 0 1 13vw;
     /* position: absolute; */

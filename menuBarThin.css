@@ -7,8 +7,11 @@
     position: relative;
     font-size: 150%;
 
-    height: 100%;
-    width: 10vw;
+    width: 100vw;
+    max-width: 100vw;
+    min-height: 10vh;
+    height: 10vh;
+    max-height: 10vh;
     padding: 0px 2%;
     display: flex;
     align-items: center;
@@ -17,11 +20,12 @@
 }
 
 #title p {
-    width: 100%;
+    width: 80%;
     text-align: center;
 }
 
 div.menuBar {
+    /* position: absolute; */
     flex: 0 1 10vh;
     /* position: absolute; */
     /* display: inline-block; */
@@ -29,16 +33,38 @@ div.menuBar {
     left: 0px;
     right: 0px;
     padding: 0px;
-    margin: 0vw;
+    margin: 0px;
     padding: 0px;
-    min-height: fit-content;
+    width: 100vw;
+    height: 10vh;
     /* height: 100vh; */
     background-color: var(--menuBarBackgroundColor);
     
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 
+    overflow: hidden;
+    
+    transition: all 1s;
+    transition-timing-function: ease;
+
+    /* border: solid blue; */
     /* position: sticky;` */
+}
+
+div.menuBar:has(.menu > input:checked) {
+    flex-grow: 2;
+    z-index: 1;
+
+    flex-direction: column;
+
+    /* position: fixed; */
+    max-height: 100vh;
+    height: 100vh;
+}
+
+div.menuBar:has(.menu > input:checked) > .menuBarItem {
+    display: flex;
 }
 
 div.menuBar .menuBarItem {
@@ -51,32 +77,73 @@ div.menuBar .menuBarItem {
     font-family: 'Lucida Sans';
     font-size: 100%;
     color: #FFF;
-    background-color: var(--menuBarTabColor);   
+    background-color: var(--menuBarTabColor);
+    /* border-top: solid;  */
+    /* border-bottom: solid;  */
+    /* border-color: #668; */
+    /* border-width: 2px; */
+    /* box-shadow: .5em 0px #668; */
+    float: left;
     
-    width: 100%;
-    min-height: 100%;
-    height: 100%;
+    width: calc(100%);
+    height: 4lh;
+    max-height: 5lh;
     
-    display: flex;
+    /* display: flex; */
+    display: none;  
     align-items: center;
-    text-align: center;
-    flex-direction: column;
+    text-align: left;
 
-    transition: transform 200ms, background-color 200ms, box-shadow 200ms;
+    transition: all 200ms;
     transition-timing-function: ease-out;
 
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 10vw;
+    width: 10vw;
+    min-height: 10vw;
+    height: 10vw;
+
+    background-image: url("./icon_menu_lines.svg");
+    background-size: contain;
+    background-repeat: no-repeat no-repeat;
+    background-position: center center;
+}
+
+.menu:has(input:checked) {
+    
+    background-image: url("./icon_x.svg");
+    background-size: contain;
+    background-repeat: no-repeat no-repeat;
+    background-position: center center;
+}
+
+.menu input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.menu.icon {
+    border: solid blue;
 }
 
 div.menuBar .menuBarHome {
     flex: 1;
 
+    height: 10vh;
     display: flex;
-    align-items: center; 
-    max-height: 100%; 
-    height: 100%;
+    align-items: flex-end;      
+    width: 100%;
 
     padding: 0px;
     margin: 0px;
+
+    z-index: 9999;
 }
 
 div.menuBar .menuBarHome p {
@@ -85,13 +152,17 @@ div.menuBar .menuBarHome p {
     cursor: pointer;
     outline: none;
     font-family: 'Lucida Sans';
-    font-size: 100%;
+    font-size: 150%;
     color: #FFF;
+
+    width: 100%;
+
+    margin: 0px;
+    margin-bottom: 2vh;
+    padding: 0px;
 
     transition: color 200ms;
     transition-timing-function: ease;
-
-    width: 100%;
 }
 
 
@@ -106,39 +177,34 @@ div.menuBar .menuBarHome p:active {
 div.menuBarItem.current {
     background-color: var(--menuBarTabActiveColor);
     /* box-shadow: 4px 0px #446; */
-    transform: translate(0px, -1vh);
+    transform: translate(-8px, 0px);
 }
 
 div.menuBar .menuBarItem.current:hover {
     background-color: var(--menuBarTabActiveColor);
     /* box-shadow: 4px 0px #668; */
-    transform: translate(0, -0.5vh);
+    transform: translate(-2px, 0px);
 }
 
 div.menuBar .menuBarItem:hover {
     background-color: var(--menuBarTabHoverColor);
     /* box-shadow: 5px 0px #446; */
-    transform: translate(0, -1vh);
+    transform: translate(-8px, 0px);
 }
 
 div.menuBar .menuBarItem:active {
     background-color: var(--menuBarTabActiveColor);
     /* box-shadow: 4px 0px #224; */
-    transform: translate(0, -1.2vh);
+    transform: translate(-10px, 0px);
 }
 
 .menuBarItem img {
-    width: 90%;
-    height: auto;
-    margin: 0px;
-    margin-top: 2vh;
+    width: auto;
+    height: 90%;
+    margin-left: 5%;
     border-radius: 30%;
 }
 
 .menuBarItem p {
-    margin: 0px;
-    width: 100%;
-    text-align: center;
-
-    /* border: solid red; */
+    padding-right: 2lh;
 }

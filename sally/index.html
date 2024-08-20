@@ -7,14 +7,17 @@
         <link rel="stylesheet" type="text/css" media="screen and (min-width: 701px)" href="../contentsDefault.css">
         <link rel="stylesheet" type="text/css" media="screen and (max-width: 700px)" href="../menuBarThin.css">
         <link rel="stylesheet" type="text/css" media="screen and (max-width: 700px)" href="../contentsThin.css">
-        <link rel="stylesheet" type="text/css" media="handheld and (max-width: 1000px)" href="../menuBarThin.css">
-        <link rel="stylesheet" type="text/css" media="handheld and (max-width: 1000px)" href="../contentsThin.css">
         <link rel="icon" type="image/x-icon" href="../Snail_Jumpy_Icon.ico">
         <script src="../index.js"></script>
     </head>
     <body onload="setup();">
         <div class="menuBar">
-            <h1 id="title"><p>Sally</p></h1>
+            <h1 id="title">
+                <p>Sally</p>
+				<label class="menu">
+					<input type="checkbox"/>
+				</label>
+            </h1>
             <div class="menuBarItem" onclick="window.location.href='../snail_jumpy/index.html'">
                 <img src="../Snail_Jumpy_Icon.png">
                 <p>Snail Jumpy</p> 
