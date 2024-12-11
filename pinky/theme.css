@@ -1,34 +1,53 @@
 :root {
-    --color1: #294131;
-    --color2: #6BAA75;
-    --color3: #2F1B25;
-    --color4: #F7567C;
-    --color5: #F3E0EC;
+    --GRAY_0: #ffffff;
+    --GRAY_1: #aaa39e;
+    --GRAY_2: #665f59;
+    --GRAY_3: #3b3631;
+    --GRAY_4: #24201d;
+    --GRAY_5: #191714;
+    --GREEN_0: #a3b37d;
+    --GREEN_1: #707a56;
+    --GREEN_2: #474d37;
+    --GREEN_3: #2c3023;
+    --GREEN_4: #1e2019;
+    --GREEN_5: #181914;
+    --MAGENTA_0: #ff80aa;
+    --MAGENTA_1: #d65781;
+    --MAGENTA_2: #ad3a5d;
+    --MAGENTA_3: #852640;
+    --MAGENTA_4: #5c1827;
+    --MAGENTA_5: #330d13;
+    --YELLOW_0: #ffdd33;
+    --YELLOW_1: #e6c72e;
+    --YELLOW_2: #ccb129;
+    --YELLOW_3: #b39b24;
+    --YELLOW_4: #99851f;
+    --YELLOW_5: #806f19;
 
-    --backgroundColor: var(--color3);
+    --backgroundColor: var(--GRAY_5);
 
-    --menuBarBackgroundColor: var(--color1);
-    --menuBarTabColor: var(--color2);
-    --menuBarTabHoverColor: var(--color5);
-    --menuBarTabActiveColor: var(--color4);
+    --menuBarBackgroundColor: var(--GREEN_3);
+    --menuBarTabColor: var(--GREEN_4);
+    --menuBarTabHoverColor: var(--MAGENTA_2);
+    --menuBarTabActiveColor: var(--YELLOW_3);
 
-    --sectionColor: var(--color3);
-    --sectionBreakColor: var(--color5);
-    --sectionTitleColor: #eee;
-    --sectionTextColor: #eee;
-    --captionTextColor: #eee;
+    --sectionColor: var(--GRAY_4);
+    --sectionBreakColor: var(--GRAY_1);
+    --sectionTitleColor: var(--GRAY_0);
+    --sectionTextColor: var(--GRAY_0);
+    --captionTextColor: var(--GRAY_0);
     
-    --galleryBackground: #29413155;
-    --galleryOutline: var(--color2);
+    --galleryBackground: #3b363155;
+    --galleryOutline: var(--GREEN_3);
     
-    --galleryArrowColor: var(--color2);
-    --galleryArrowActiveColor: var(--color4);
-    --galleryArrowInactiveColor: var(--color5);
+    --galleryArrowColor: var(--GREEN_2);
+    --galleryArrowActiveColor: var(--GREEN_1);
+    --galleryArrowInactiveColor: var(--GRAY_4);
 
-    --galleryDotColor: var(--color5);
-    --galleryActiveDotColor: var(--color4);
+    --galleryDotColor: var(--GREEN_2);
+    --galleryActiveDotColor: var(--GREEN_0);
 
-    --linkColor: var(--color5);
-    --linkHoverColor: var(--color2);
-    --linkActiveColor: var(--color4);
+    --linkColor: var(--GREEN_0);
+    --linkHoverColor: var(--MAGENTA_0);
+    --linkActiveColor: var(--GREEN_1);
 }
