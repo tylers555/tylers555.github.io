@@ -1,53 +1,53 @@
 :root {
-    --GRAY_0: #ffffff;
-    --GRAY_1: #aaa39e;
-    --GRAY_2: #665f59;
-    --GRAY_3: #3b3631;
-    --GRAY_4: #24201d;
-    --GRAY_5: #191714;
-    --GREEN_0: #a3b37d;
-    --GREEN_1: #707a56;
-    --GREEN_2: #474d37;
-    --GREEN_3: #2c3023;
-    --GREEN_4: #1e2019;
-    --GREEN_5: #181914;
-    --MAGENTA_0: #ff80aa;
-    --MAGENTA_1: #d65781;
-    --MAGENTA_2: #ad3a5d;
-    --MAGENTA_3: #852640;
-    --MAGENTA_4: #5c1827;
-    --MAGENTA_5: #330d13;
-    --YELLOW_0: #ffdd33;
-    --YELLOW_1: #e6c72e;
-    --YELLOW_2: #ccb129;
-    --YELLOW_3: #b39b24;
-    --YELLOW_4: #99851f;
-    --YELLOW_5: #806f19;
+    /* Theme is from: 
+    https://colorbox.io/?c0=%26p%24s%24%3D12%26p%24h%24st%24%3D50%26p%24h%24e%24%3D210%26p%24h%24c%24%3Deco%26p%24sa%24st%24%3D0.05%26p%24sa%24e%24%3D0.3%26p%24sa%24r%24%3D1%26p%24sa%24c%24%3Deqi%26p%24b%24st%24%3D1%26p%24b%24e%24%3D.1%26p%24b%24c%24%3Deqio%26o%24n%24%3DNeutrals%26o%24ro%24%3Dcw%26o%24ms%24%3D%5B%5D&c1=%26p%24s%24%3D6%26p%24h%24st%24%3D10%26p%24h%24e%24%3D330%26p%24h%24c%24%3Deqo%26p%24sa%24st%24%3D0.7%26p%24sa%24e%24%3D0.7%26p%24sa%24r%24%3D1%26p%24sa%24c%24%3Deqio%26p%24b%24st%24%3D0.9%26p%24b%24e%24%3D0.4%26p%24b%24c%24%3Deqio%26o%24n%24%3DMain%26o%24ro%24%3Dccw%26o%24ms%24%3D%5B%5D
+    */
+    --ACCENT_0: #e66045;
+    --ACCENT_1: #db424e;
+    --ACCENT_2: #bb385c;
+    --ACCENT_3: #bb385c;
+    --ACCENT_4: #702247;
+    --ACCENT_5: #661f42;
 
-    --backgroundColor: var(--GRAY_5);
 
-    --menuBarBackgroundColor: var(--GREEN_3);
-    --menuBarTabColor: var(--GREEN_4);
-    --menuBarTabHoverColor: var(--MAGENTA_2);
-    --menuBarTabActiveColor: var(--YELLOW_3);
+    --NEUTRAL_0: #fffdf2;
+    --NEUTRAL_1: #f4fbed;
+    --NEUTRAL_2: #e1efe2;
+    --NEUTRAL_3: #ccdcd4;
+    --NEUTRAL_4: #afbfbd;
+    --NEUTRAL_5: #8c9a9c;
 
-    --sectionColor: var(--GRAY_4);
-    --sectionBreakColor: var(--GRAY_1);
-    --sectionTitleColor: var(--GRAY_0);
-    --sectionTextColor: var(--GRAY_0);
-    --captionTextColor: var(--GRAY_0);
+    --BASE_0: #677376;
+    --BASE_1: #475055;
+    --BASE_2: #2f363b;
+    --BASE_3: #1f2429;
+    --BASE_4: #161a1e;
+    --BASE_5: #121619;	
+
+    --backgroundColor: var(--BASE_4);
+
+    --menuBarBackgroundColor: var(--BASE_3);
+    --menuBarTabColor:        var(--BASE_4);
+    --menuBarTabHoverColor:   var(--BASE_2);
+    --menuBarTabActiveColor:  var(--ACCENT_5);
+
+    --sectionColor: var(--BASE_4);
+    --sectionBreakColor: var(--NEUTRAL_1);
+    --sectionTitleColor: var(--NEUTRAL_0);
+    --sectionTextColor: var(--NEUTRAL_1);
+    --captionTextColor: var(--NEUTRAL_0);
     
-    --galleryBackground: #3b363155;
-    --galleryOutline: var(--GREEN_3);
+    --galleryBackground: var(--BASE_3);
+    --galleryOutline: var(--ACCENT_5);
     
-    --galleryArrowColor: var(--GREEN_2);
-    --galleryArrowActiveColor: var(--GREEN_1);
-    --galleryArrowInactiveColor: var(--GRAY_4);
+    --galleryArrowColor: var(--ACCENT_5);
+    --galleryArrowActiveColor: var(--ACCENT_1);
+    --galleryArrowInactiveColor: var(--NEUTRAL_4);
 
-    --galleryDotColor: var(--GREEN_2);
-    --galleryActiveDotColor: var(--GREEN_0);
+    --galleryDotColor: var(--ACCENT_5);
+    --galleryActiveDotColor: var(--ACCENT_0);
 
-    --linkColor: var(--GREEN_0);
-    --linkHoverColor: var(--MAGENTA_0);
-    --linkActiveColor: var(--GREEN_1);
+    --linkColor: var(--ACCENT_1);
+    --linkHoverColor: var(--ACCENT_0);
+    --linkActiveColor: var(--BASE_0);
 }

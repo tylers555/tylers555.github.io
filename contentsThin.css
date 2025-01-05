@@ -19,7 +19,7 @@ body {
     /* width:50%; */
     /* width: 100%; */
 
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: y proximity;
     scroll-snap-stop: always;
 }
 
@@ -82,7 +82,7 @@ hr {
     /* padding: 1vw; */
     line-height: 1.4;
 
-    font-family: 'Georgia ';
+    font-family: 'Merriweather ';
     font-size: 100%;
 }
 
@@ -127,7 +127,7 @@ hr {
     align-items: center;
 
     background-color: var(--galleryBackground);
-    border: max(0.2vw, 0.2vh) solid var(--galleryOutline);
+    border: max(0.3vw, 0.3vh) solid var(--galleryOutline);
     border-radius: max(2vw, 2vw);
 
     overflow: visible;

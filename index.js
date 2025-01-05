@@ -32,6 +32,7 @@ function setup(){
 
   fullPage.addEventListener('click', function(event) {  
     const elem = document.querySelector("#fullpageSubject");
+    if (!elem) return;
     const outsideClick = !elem.contains(event.target);
     if(outsideClick){
       fullPageDisappear();
@@ -169,6 +170,7 @@ function setup(){
 function fullPageDisappear(){
   const fullPage = document.querySelector('#fullpage');
   fullPage.innerHTML = '';
+  fullPage.style.display = "none"
   fullPage.style.animation = 'fullpageDisappear 200ms ease 1 forwards';
 }
 

@@ -13,7 +13,7 @@
     display: flex;
     align-items: center;
     
-    font-family: 'Lucida Sans';
+    font-family: 'Merriweather';
 }
 
 #title p {
@@ -50,7 +50,7 @@ div.menuBar .menuBarItem {
     text-align: center;
     cursor: pointer;
     outline: none;
-    font-family: 'Lucida Sans';
+    font-family: 'Merriweather';
     font-size: 100%;
     color: #FFF;
     background-color: var(--menuBarTabColor);
@@ -77,7 +77,7 @@ div.menuBar .menuBarItem {
 div.menuBar .menuBarHome {
     flex: 1;
 
-    height: 350px;
+    height: 10vh;
     display: flex;
     align-items: flex-end;      
     width: 100%;
@@ -91,7 +91,7 @@ div.menuBar .menuBarHome p {
     
     cursor: pointer;
     outline: none;
-    font-family: 'Lucida Sans';
+    font-family: 'Merriweather';
     font-size: 150%;
     color: #FFF;
 

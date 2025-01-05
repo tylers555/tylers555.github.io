@@ -16,7 +16,7 @@
     display: flex;
     align-items: center;
     
-    font-family: 'Lucida Sans';
+    font-family: 'Merriweather';
 }
 
 #title p {
@@ -67,6 +67,12 @@ div.menuBar:has(.menu > input:checked) > .menuBarItem {
     display: flex;
 }
 
+/* 
+div.menuBar:has(.menu > input:checked) > .menuBarHome {
+    display: flex;
+    min-height: 50vh;
+} */
+
 div.menuBar .menuBarItem {
     flex: 1;
     padding: 0vw;
@@ -74,7 +80,7 @@ div.menuBar .menuBarItem {
     text-align: center;
     cursor: pointer;
     outline: none;
-    font-family: 'Lucida Sans';
+    font-family: 'Merriweather';
     font-size: 100%;
     color: #FFF;
     background-color: var(--menuBarTabColor);
@@ -137,7 +143,7 @@ div.menuBar .menuBarHome {
 
     height: 10vh;
     display: flex;
-    align-items: flex-end;      
+    align-items: flex-start;      
     width: 100%;
 
     padding: 0px;
@@ -151,7 +157,7 @@ div.menuBar .menuBarHome p {
     
     cursor: pointer;
     outline: none;
-    font-family: 'Lucida Sans';
+    font-family: 'Merriweather';
     font-size: 150%;
     color: #FFF;
 
