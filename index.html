@@ -1,124 +1,147 @@
 <!DOCTYPE html>
 <html>
-    <head>
-		<title>Tyler's Website</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="theme.css">
-        <link rel="stylesheet" type="text/css" media="screen and (min-width: 701px)" href="./menuBarDefault.css">
-        <link rel="stylesheet" type="text/css" media="screen and (min-width: 701px)" href="./contentsDefault.css">
-        <link rel="stylesheet" type="text/css" media="screen and (max-width: 700px)" href="./menuBarThin.css">
-        <link rel="stylesheet" type="text/css" media="screen and (max-width: 700px)" href="./contentsThin.css">
-		<link rel="icon" type="image/x-icon" href="./Snail_Jumpy_Icon.ico">
-	</head>
-    <body>
-		<div class="menuBar">
-			<h1 id="title">
-				<p>Tyler's Home Page</p>
-				<label class="menu">
-					<input type="checkbox"/>
-				</label>
-			</h1>
-			<div class="menuBarItem" onclick="window.location.href='./snail_jumpy/index.html'">
-				<img src="./Snail_Jumpy_Icon.png">
-				<p>Snail Jumpy</p> 
-			</div>
-			<div class="menuBarItem" onclick="window.location.href='./sally/index.html'">
-				<img src="./Sally_Icon.png">
-				<p>Sally</p>
-			</div>
-			<div class="menuBarItem" onclick="window.location.href='./pinky/index.html'">
-				<img src="./Pinky_Icon.png">
-				<p>Pinky</p>
-			</div>
-			<div class="menuBarItem" onclick="window.location.href='./esc/index.html'">
-				<img src="./Pinky_Icon.png">
-				<p>ESCs</p>
-			</div>
-			<div class="menuBarItem" onclick="window.location.href='./3d_printer/index.html'">
-				<img src="./Pinky_Icon.png">
-				<p>3D Printer</p>
-			</div>
-		</div>
+<head>
+    <title>Tyler's Website</title>
+    <link rel="stylesheet" href="body_normal.css"> 
+    <script type="text/javascript" src="main.js"></script> 
+    <style>
+        #page-about-me {
+            /* background-image: url("./snail_jumpy_new.png"); */
+        }
 
-		<div class="contents">
-			<div class="page">
-				<h1 class="sectionTitle">Tyler's Website</h1>
-				<div class="section">
-					<div class="sectionText">
-						<p>
-							This is my website for showcasing my projects! 
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="page">
-				<h1 class="sectionTitle">Snail Jumpy</h1>
-				<div class="section">
-					<div class="sectionText">
-						<p>
-							Snail Jumpy is a long running project I started with a friend.
-							Our goal is to program an entire video game—engine and all—by hand.
-							<br><a class="link" href="snail_jumpy/index.html">Check it out</a>
-						</p>
-					</div>
-					<img src="snail_jumpy/Snail_Jumpy.png">
-				</div>
-			</div>
-			<div class="page">
-				<h1 class="sectionTitle">Sally</h1>
-				<div class="section">
-					<img src="sally/Sally1.jpg">
-					<div class="sectionText">
-						<p>
-							Sally is an esoteric combat robot that I built.
-							My eventual goal is to use all handmade electonics.
-							<br><a class="link" href="sally/index.html">Check it out</a>
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="page">
-				<h1 class="sectionTitle">Pinky</h1>
-				<div class="section">
-					<div class="sectionText">
-						<p>
-							Pinky is a basic microcontroller board that I designed and assembled.
-							My goal is to design a board for use in all my future projects.
-							<br><a class="link" href="pinky/index.html">Check it out</a>
-						</p>
-					</div>
-					<img src="pinky/Pinky1.jpg">
-				</div>
-			</div>
-			<div class="page">
-				<h1 class="sectionTitle">ESCs</h1>
-				<div class="section">
-					<!-- <img src="pinky/Pinky1.jpg"> -->
-					<div class="sectionText">
-						<p>
-							I have designed and assembled a 3-channel brushed ESC and a brushless ESC.
-							Intended to be used inside in my robots (in conjunction with Pinky).
-							<br><a class="link" href="esc/index.html">Check it out</a>
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="page">
-				<h1 class="sectionTitle">New 3D Printer</h1>
-				<div class="section">
-					<div class="sectionText">
-						<p>
-							I am planning to redesign my 3D printer in two phases.
-							The first phase deals with the structure, and the second phase with the electronics.
-							<br><a class="link" href="3d_printer/index.html">Check it out</a>
-						</p>
-					</div>
-					<!-- <img src="pinky/Pinky1.jpg"> -->
-				</div>
-			</div>
-		</div>
+        #programming {
+            background-image: url("./snail_jumpy_new.png");
+        }
+        
+        #electronics {
+            background-image: url("./pinky1_schematic.png");
+        }
 
-		<div id="fullpage"></div>
-		<script src="./index.js"></script>
-    </body>
+        #mechanical {
+            background-image: url("./sally1_comp1.jpg");
+        }
+    </style>
+</head>
+<body class="preload">
+    <div id="menu-bar">
+        <h1>Tyler's Website</h1>
+        <!-- <button onclick="setAnimation();">Set</button>
+        <button onclick="unsetAnimation();">Unset</button> -->
+        <div class="buttons">
+            <a href="#programming">Programming</a>
+            <a href="#electronics">Electronics</a>
+            <a href="#mechanical">Mechanical</a>
+            <a href="#about-me">About me</a>
+        </div>
+    </div>
+    <div id="all-pages">
+        <div class="page" id="programming">
+            <div class="effects"></div>
+            <h2 class="scroll-animation header-animation">Programming</h2>
+            <div class="content scroll-animation content-animation">
+                <div>
+                    <div class="horizontal">
+                        <div class="item vertical" onclick="window.location.assign('./programming/index.html#snail-jumpy')">
+                            <h3>Snail Jumpy</h3>
+                            <p>
+                                A video game developed from scratch, alongside it's own game engine.
+                            </p>
+                        </div>
+                        <div class="item vertical" onclick="window.location.assign('./programming/index.html#tis-lib')">
+                            <h3>TisLib</h3>
+                            <p>
+                                A simple and powerful library developed from scratch,
+                                with a focus on graphical application development.
+                            </p>
+                        </div>
+                        <div class="item vertical" onclick="window.location.assign('./programming/index.html#other')">
+                            <h3>Others</h3>
+                            <p>
+                                From hackathons to ____.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page" id="electronics">
+            <div class="effects"></div>
+            <h2 class="scroll-animation header-animation">Electronics</h2>
+            <div class="content scroll-animation content-animation">
+                <div>
+                    <div class="horizontal">
+                        <div class="item vertical" onclick="window.location.assign('./electronics/index.html#pinky')">
+                            <h3>Pinky</h3>
+                            <p>
+                                A custom microcontroller board designed for controlling multiple child boards.
+                            </p>
+                        </div>
+                        <div class="item vertical" onclick="window.location.assign('./electronics/index.html#bdc-esc')">
+                            <h3>BDC ESC</h3>
+                            <p>
+                                A homegrown 3 channel ESC for controlling 3 brushed DC motors.
+                            </p>
+                        </div>
+                        <div class="item vertical" onclick="window.location.assign('./electronics/index.html#bldc-esc')">
+                            <h3>BLDC ESC</h3>
+                            <p>
+                                A homegrown ESC for controlling a three phase brushless DC motor.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page" id="mechanical">
+            <div class="effects"></div>
+            <h2 class="scroll-animation header-animation">Mechanical</h2>
+            <div class="content scroll-animation content-animation">
+                <div>
+                    <div class="horizontal">
+                        <div class="item vertical" onclick="window.location.assign('./mechanical/index.html#sally-robot')">
+                            <h3>Sally</h3>
+                            <p>
+                                A 3 lb combat robot with a unique design.
+                            </p>
+                        </div>
+                        <div class="item vertical" onclick="window.location.assign('./mechanical/index.html#page-3d-printer')">
+                            <h3>3D Printer</h3>
+                            <p>
+                                From modded, to salavaged, to homegrown.
+                            </p>
+                        </div>
+                        <div class="item vertical" onclick="window.location.assign('./mechanical/index.html#other')">
+                            <h3>Others</h3>
+                            <p>
+                                From animatronic birds to hydroponic towers.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page" id="about-me">
+            <div class="effects"></div>
+            <h2 class="scroll-animation header-animation">About Me</h2>
+            <div class="content scroll-animation content-animation">
+                <div>
+                    <div class="horizontal">
+                        <div class="item vertical no-hover">
+                            <h3>Me</h3>
+                            <p>
+                                Me
+                            </p>
+                        </div>
+                        <div class="item vertical no-hover">
+                            <h3>Me 2</h3>
+                            <p>
+                                Me 2
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
 </html>
