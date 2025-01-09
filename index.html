@@ -10,28 +10,31 @@
         }
 
         #programming {
-            background-image: url("./snail_jumpy_new.png");
+            background-image: url("./background_programming.png");
         }
         
         #electronics {
-            background-image: url("./pinky1_schematic.png");
+            background-image: url("./background_electronics.png");
         }
 
         #mechanical {
-            background-image: url("./sally1_comp1.jpg");
+            background-image: url("./background_mechanical.png");
         }
     </style>
+    <!-- <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'> -->
 </head>
 <body class="preload">
     <div id="menu-bar">
         <h1>Tyler's Website</h1>
         <!-- <button onclick="setAnimation();">Set</button>
         <button onclick="unsetAnimation();">Unset</button> -->
-        <div class="buttons">
-            <a href="#programming">Programming</a>
-            <a href="#electronics">Electronics</a>
-            <a href="#mechanical">Mechanical</a>
-            <a href="#about-me">About me</a>
+        <div class="buttons-container vertical">
+            <div class="buttons">
+                <a href="#programming">Programming</a>
+                <a href="#electronics">Electronics</a>
+                <a href="#mechanical">Mechanical</a>
+                <a href="#about-me">About me</a>
+            </div>
         </div>
     </div>
     <div id="all-pages">
@@ -45,6 +48,10 @@
                             <h3>Snail Jumpy</h3>
                             <p>
                                 A video game developed from scratch, alongside it's own game engine.
+                                <!-- <ul>
+                                    Skills:
+                                    <li>C++</li>
+                                </ul> -->
                             </p>
                         </div>
                         <div class="item vertical" onclick="window.location.assign('./programming/index.html#tis-lib')">

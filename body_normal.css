@@ -11,12 +11,13 @@
     --page-bg-color:              #3c5551;
     --page-title-bg-color:        #3e4d55c0;
     --page-title-shadow-color:    #19000dd0;
-    --page-gradient-top-color:    #33051c60;
+    --page-gradient-top-color:    #33051c40;
     --page-gradient-bottom-color: #00000000;
 
-    --content-bg-color:         #242421;
-    --content-item-bg-color:     #3e4d55c5;
-    --content-item-shadow-color: #19000dd0;
+    --content-bg-color:            #242421;
+    --content-item-bg-color:       #3e4d55c5;
+    --content-item-bg-hover-color: #1d282dc5;
+    --content-item-shadow-color:   #19000dd0;
 }
 
 .preload * { 
@@ -46,13 +47,19 @@
     margin:  0pt;
     font-size: 18pt;
     display: inline-block;
+    flex: 1
 
     /* border: solid blue; */
 }
 
-#menu-bar .buttons {
+#menu-bar .buttons-container {
+    padding:  0pt 0pt; 
+}
+
+#menu-bar .buttons-container .buttons {
     display: flex;
     flex-direction: row;
+    justify-content: end;
     
     white-space: nowrap;
     overflow: hidden;
@@ -60,14 +67,14 @@
     padding: 0pt 0pt;
     margin:  0pt 0pt;
  
-    /* border: solid red; */
+    /* border: solid white; */
 }
 
-#menu-bar .buttons a {
+#menu-bar .buttons-container .buttons a {
     display: inline-block;
-    flex: 1;
-    margin: 0pt 0pt;
+    /* flex: 1; */
     padding: 0pt 5pt;
+    margin:  2pt 0pt;
     
     animation: menu-bar-slide-out ease-out;
     animation-duration: 300ms;
@@ -75,10 +82,11 @@
 
     text-decoration: none;
 
+    font-size: 12pt;
     color: var(--menu-bar-text-color);
 }
 
-#menu-bar .buttons a.active {
+#menu-bar .buttons-container .buttons a.active {
     animation: menu-bar-slide-in ease-in;
     animation-duration: 300ms;
     animation-direction: normal;
@@ -139,9 +147,10 @@ body {
     flex-direction: column;
 
     height: 100%;
+    font-family: 'Arial';
     font-size: 14pt;
 
-    overflow: clip;
+    overflow: hidden;
 }
 
 #all-pages {
@@ -240,7 +249,7 @@ body {
     bottom: 0px;
 
     flex: 1;
-    padding: 10pt;
+    padding: 0pt;
 
     display: flex;
     flex-direction: column;
@@ -272,6 +281,8 @@ body {
     transform: scale(1.05);
     backdrop-filter: blur(1.0pt) sepia(0.5);
     z-index: 99;
+    cursor: pointer;
+    background-color: var(--content-item-bg-hover-color);
 }
 
 .content * h3 {
@@ -285,6 +296,10 @@ body {
     text-align: left;
 }
 
+.content * .item p * li {
+    text-align: left;
+    /* border: */
+}
 
 .horizontal {
     flex: 1;
@@ -329,6 +344,10 @@ body {
     0% {
         translate: -100% 0%;
         /* opacity: 1.0; */
+    }
+    50% {
+        translate: -75% 0%;
+        /* opacity: 0.0; */
     }
     100% {
         translate: 0% 0%;
