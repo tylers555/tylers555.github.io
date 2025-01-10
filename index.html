@@ -9,25 +9,46 @@
             /* background-image: url("./snail_jumpy_new.png"); */
         }
 
-        #programming {
-            background-image: url("./background_programming.png");
+        #programming-snail-jumpy {
+            background-image: url("./snail_jumpy_new.png");
         }
         
-        #electronics {
-            background-image: url("./background_electronics.png");
+        #programming-tis-lib {
+            background-image: url("./tis_lib_demo1.png");
+        }
+        
+        #programming-other {
+            background-image: url("./hackathon1_program.png");
         }
 
-        #mechanical {
-            background-image: url("./background_mechanical.png");
+        #electronics-pinky {
+            background-image: url("./background_pinky_esc.png");
+        }
+
+        #electronics-bdc-esc {
+            background-image: url("./background_bdc_esc.png");
+        }
+        
+        #electronics-bldc-esc {
+            background-image: url("./background_bldc_esc.png");
+        }
+
+        #mechanical-sally {
+            background-image: url("./sally1_pose1.jpg");
+        }
+        
+        #mechanical-3d-printers {
+            background-image: url("./anet_a8_image2.jpg");
+        }
+
+        #mechanical-other {
+            background-image: url("./mechanical_bird_image1.JPG");
         }
     </style>
-    <!-- <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'> -->
 </head>
 <body class="preload">
     <div id="menu-bar">
         <h1>Tyler's Website</h1>
-        <!-- <button onclick="setAnimation();">Set</button>
-        <button onclick="unsetAnimation();">Unset</button> -->
         <div class="buttons-container vertical">
             <div class="buttons">
                 <a href="#programming">Programming</a>
@@ -39,112 +60,124 @@
     </div>
     <div id="all-pages">
         <div class="page" id="programming">
-            <div class="effects"></div>
-            <h2 class="scroll-animation header-animation">Programming</h2>
-            <div class="content scroll-animation content-animation">
-                <div>
-                    <div class="horizontal">
-                        <div class="item vertical" onclick="window.location.assign('./programming/index.html#snail-jumpy')">
-                            <h3>Snail Jumpy</h3>
-                            <p>
-                                A video game developed from scratch, alongside it's own game engine.
-                                <!-- <ul>
-                                    Skills:
-                                    <li>C++</li>
-                                </ul> -->
-                            </p>
-                        </div>
-                        <div class="item vertical" onclick="window.location.assign('./programming/index.html#tis-lib')">
-                            <h3>TisLib</h3>
-                            <p>
-                                A simple and powerful library developed from scratch,
-                                with a focus on graphical application development.
-                            </p>
-                        </div>
-                        <div class="item vertical" onclick="window.location.assign('./programming/index.html#other')">
-                            <h3>Others</h3>
-                            <p>
-                                From hackathons to ____.
-                            </p>
-                        </div>
+            <div class="content">
+                <div class="column" id="programming-tis-lib">
+                    <div class="effects"></div>
+                    <div class="item">
+                        <h3>TisLib</h3>
+                        <p>
+                            A simple and powerful library developed from scratch,
+                            with a focus on graphical application development.
+                        </p>
+                        <div class="center"><a href="programming/index.html#tis-lib">See more!</a></div>
+                    </div>
+                </div>
+                <div class="column" id="programming-snail-jumpy">
+                    <div class="effects"></div>
+                    <div class="item">
+                        <h3>Snail Jumpy</h3>
+                        <p>
+                            A video game developed from scratch, alongside it's own game engine.
+                        </p>
+                        <div class="center"><a href="programming/index.html#snail-jumpy">See more!</a></div>
+                    </div>
+                </div>
+                <div class="column" id="programming-other">
+                    <div class="effects"></div>
+                    <div class="item">
+                        <h3>Others</h3>
+                        <p>
+                            From hackathons to ____.
+                        </p>
+                        <div class="center"><a href="programming/index.html#other">See more!</a></div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="page" id="electronics">
-            <div class="effects"></div>
-            <h2 class="scroll-animation header-animation">Electronics</h2>
-            <div class="content scroll-animation content-animation">
-                <div>
-                    <div class="horizontal">
-                        <div class="item vertical" onclick="window.location.assign('./electronics/index.html#pinky')">
-                            <h3>Pinky</h3>
-                            <p>
-                                A custom microcontroller board designed for controlling multiple child boards.
-                            </p>
-                        </div>
-                        <div class="item vertical" onclick="window.location.assign('./electronics/index.html#bdc-esc')">
-                            <h3>BDC ESC</h3>
-                            <p>
-                                A homegrown 3 channel ESC for controlling 3 brushed DC motors.
-                            </p>
-                        </div>
-                        <div class="item vertical" onclick="window.location.assign('./electronics/index.html#bldc-esc')">
-                            <h3>BLDC ESC</h3>
-                            <p>
-                                A homegrown ESC for controlling a three phase brushless DC motor.
-                            </p>
-                        </div>
+            <div class="content">
+                <div class="column" id="electronics-pinky">
+                    <div class="effects"></div>
+                    <div class="item">
+                        <h3>Pinky</h3>
+                        <p>
+                            A custom microcontroller board designed for controlling multiple child boards.
+                        </p>
+                        <div class="center"><a href="electronics/index.html#pinky">See more!</a></div>
+                    </div>
+                </div>
+                <div class="column" id="electronics-bdc-esc">
+                    <div class="effects"></div>
+                    <div class="item">
+                        <h3>BDC ESC</h3>
+                        <p>
+                            A homegrown 3 channel ESC for controlling 3 brushed DC motors.
+                        </p>
+                        <div class="center"><a href="electronics/index.html#bdc-esc">See more!</a></div>
+                    </div>
+                </div>
+                <div class="column" id="electronics-bldc-esc">
+                    <div class="effects"></div>
+                    <div class="item">
+                        <h3>BLDC ESC</h3>
+                        <p>
+                            A homegrown ESC for controlling a three phase brushless DC motor.
+                        </p>
+                        <div class="center"><a href="electronics/index.html#bldc-esc">See more!</a></div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="page" id="mechanical">
-            <div class="effects"></div>
-            <h2 class="scroll-animation header-animation">Mechanical</h2>
-            <div class="content scroll-animation content-animation">
-                <div>
-                    <div class="horizontal">
-                        <div class="item vertical" onclick="window.location.assign('./mechanical/index.html#sally-robot')">
-                            <h3>Sally</h3>
-                            <p>
-                                A 3 lb combat robot with a unique design.
-                            </p>
-                        </div>
-                        <div class="item vertical" onclick="window.location.assign('./mechanical/index.html#page-3d-printer')">
-                            <h3>3D Printer</h3>
-                            <p>
-                                From modded, to salavaged, to homegrown.
-                            </p>
-                        </div>
-                        <div class="item vertical" onclick="window.location.assign('./mechanical/index.html#other')">
-                            <h3>Others</h3>
-                            <p>
-                                From animatronic birds to hydroponic towers.
-                            </p>
-                        </div>
+            <div class="content">
+                <div class="column" id="mechanical-sally">
+                    <div class="effects"></div>
+                    <div class="item">
+                        <h3>Sally</h3>
+                        <p>
+                            A 3 lb combat robot with a unique design.
+                        </p>
+                        <div class="center"><a href="mechanical/index.html#sally">See more!</a></div>
+                    </div>
+                </div>
+                <div class="column" id="mechanical-3d-printers">
+                    <div class="effects"></div>
+                    <div class="item">
+                        <h3>3D Printers</h3>
+                        <p>
+                            From modded, to salavaged, to homegrown.
+                        </p>
+                        <div class="center"><a href="mechanical/index.html#page-3d-printer">See more!</a></div>
+                    </div>
+                </div>
+                <div class="column" id="mechanical-other">
+                    <div class="effects"></div>
+                    <div class="item">
+                        <h3>Others</h3>
+                        <p>
+                            From animatronic birds to hydroponic towers.
+                        </p>
+                        <div class="center"><a href="mechanical/index.html#other">See more!</a></div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="page" id="about-me">
             <div class="effects"></div>
-            <h2 class="scroll-animation header-animation">About Me</h2>
-            <div class="content scroll-animation content-animation">
-                <div>
-                    <div class="horizontal">
-                        <div class="item vertical no-hover">
-                            <h3>Me</h3>
-                            <p>
-                                Me
-                            </p>
-                        </div>
-                        <div class="item vertical no-hover">
-                            <h3>Me 2</h3>
-                            <p>
-                                Me 2
-                            </p>
-                        </div>
+            <h2 class="">About Me</h2>
+            <div class="content">
+                <div class="horizontal">
+                    <div class="item vertical no-hover">
+                        <h3>Me</h3>
+                        <p>
+                            Me
+                        </p>
+                    </div>
+                    <div class="item vertical no-hover">
+                        <h3>Me 2</h3>
+                        <p>
+                            Me 2
+                        </p>
                     </div>
                 </div>
             </div>

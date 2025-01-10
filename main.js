@@ -29,7 +29,7 @@ function setAnimationBasedOnVisibility(element){
       return;
     }
 
-    pageElement = element.parentElement;
+    pageElement = element.closest(".page");
     percent = getVisibilityPercentage(pageElement);
     console.log("Percent: " + percent)
     animation.currentTime = 499.999*percent;
