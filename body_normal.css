@@ -16,8 +16,8 @@
     
     --content-bg-color:            #242421;
     /* --content-item-bg-color:       #0f1619d0; */
-    --content-item-bg-color:       #0a0a0af0;
-    --content-item-bg-hover-color: #0a0a0aa0;
+    --content-item-bg-color:       #0a0a0aff;
+    --content-item-bg-hover-color: #0a0a0ad0;
     /* --content-item-bg-hover-color: #1d282da0; */
     --content-item-shadow-color:   #19000dd0;
     --content-active-text-color:   #ff99cc;
@@ -241,8 +241,8 @@ body {
     /* background-color: red; */
     /* background-image: linear-gradient(var(--page-gradient-top-color), var(--page-gradient-bottom-color)); */
 
-    backdrop-filter: blur(1pt);
-    transition: all 200ms ease-in-out;
+    backdrop-filter: blur(2pt) saturate(90%) contrast(80%);
+    transition: all 500ms ease-in-out;
 }
 
 .page .content {
@@ -290,7 +290,7 @@ body {
 }
 
 .column:hover .effects {
-    backdrop-filter: blur(0pt) grayscale(0);
+    backdrop-filter: blur(0pt) saturate(100%) contrast(100%);
 }
 
 .content .column .item {
