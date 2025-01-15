@@ -45,7 +45,6 @@ window.addEventListener("load", () => {
   function updateSelected(){
     let current = '';
 
-    console.log("here");
     sliders.forEach(slide => {
       setAnimationBasedOnVisibility(slide);
     });
@@ -72,6 +71,19 @@ window.addEventListener("load", () => {
 
   allPages.addEventListener('scroll', updateSelected);
   updateSelected();
+
+  const cursorGlows = document.querySelectorAll('.cursor-glow');
+
+  window.addEventListener('mousemove', (event) => {
+    cursorGlows.forEach(glow => {
+      const rect = glow.getBoundingClientRect();
+
+
+      glow.style.background = `radial-gradient(30vw at ${event.pageX-rect.left}px ${event.pageY-rect.top}px,
+                                  var(--content-bg-hover-color), 
+                                  var(--content-bg-color))`;
+    });
+  });
 
   window.setTimeout(() => {
     document.body.classList.remove("preload");
