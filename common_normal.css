@@ -152,14 +152,16 @@ body {
 
 .effects {
     position: absolute;
-    left:   0;
-    top:    0;
-    right:  0;
-    bottom: 0;
+    left:   -1px;
+    top:    -1px;
+    right:  -1px;
+    bottom: -1px;
+
+    /* border: solid red 1px; */
 
     pointer-events: none;
     
-    backdrop-filter: blur(1pt) saturate(90%) contrast(80%);
+    /* backdrop-filter: blur(1pt) saturate(90%) contrast(80%); */
     transition: all 750ms ease-in-out;
     
     will-change: backdrop-filter;
@@ -172,6 +174,10 @@ body {
     perspective: 1000;
     transform: translate3d(0,0,0);
     transform: translateZ(0);
+
+    background-color: var(--main-bg-color);
+
+    /* border-radius: 20pt; */
 }
 
 #all-pages {

@@ -2,8 +2,9 @@
 
 :root {
     --content-bg-color:            #242421;
-    --content-item-bg-color:       #0a0a0aff;
-    --content-item-bg-hover-color: #0a0a0ad0;
+    --content-item-bg-color:       #4c2b28;
+    --content-item-bg-hover-color: #4c2b28e0;
+    --content-item-border-color:   #9b9a97;
     --content-item-shadow-color:   #19000dd0;
     --content-active-text-color:   #ff99cc;
 }
@@ -61,7 +62,9 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: relative;
+    background-attachment: relative;    
+
+    border-radius: 20pt;
     
     /* filter: grayscale(40%); */
     /* filter: blur(1pt); */
@@ -71,21 +74,32 @@
     flex-direction: column;
     justify-content: center;
 
-    /* border: solid white; */
+    border: solid var(--main-bg-color);
+    transition: all 750ms ease-in-out;
+
+    margin: 10pt 5pt;
+}
+
+.column:hover {
+    border: solid var(--content-item-border-color);
 }
 
 .column:hover .effects {
     backdrop-filter: blur(0pt) saturate(100%) contrast(100%);
+    background-color: #0000;
 }
 
 .content .column .item {
     background-color: var(--content-item-bg-color);
     backdrop-filter: blur(1.0pt) grayscale(1.0);
 
-    margin:  0pt 0pt;
+    margin:  10pt 10pt;
     /* margin-top: 10%; */
     padding: 5pt 15%;
-    height: 20%;
+    height: 30%;
+
+    border-radius: 15pt;
+    border: solid var(--content-item-border-color);
 
     /* transition: margin 200ms ease-in; */
     transition: all 200ms ease-out;
